@@ -1,0 +1,66 @@
+/* Here is your custom css styles. */
+@font-face{
+    font-family: '字体';
+    src: url('../font/字体.TTF');
+}
+.diyFont{
+    font-family: '字体', serif;
+}
+
+* Here is your custom css styles. *
+/* hr分割线 剪刀样式 */
+hr {
+    position: relative;
+    margin: 2rem auto;
+    width: calc(100% - 4px);
+    border: 2px dashed #a4d8fa;
+    background: #fff;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+hr:before {
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    z-index: 1;
+    color: #49b1f5;
+    content: "";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 20px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+hr:hover :before{
+    left: 95%;
+}
+/*加入卡片星星背景图片 可以自己选*/
+
+.card {
+    background: url(https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210504193531.jfif) top;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(42, 89, 165, .1), 0 5px 15px rgba(71, 159, 188, .07) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
