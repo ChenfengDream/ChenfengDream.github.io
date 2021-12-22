@@ -489,43 +489,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-搭建hexo博客"><a href="#一-搭建hexo博客" class="headerlink" title="一.搭建hexo博客"></a>一.搭建hexo博客</h1><h2 id="1-git指令"><a href="#1-git指令" class="headerlink" title="1.git指令"></a>1.git指令</h2><pre class=" language-c"><code class="language-c">在指令前加sudo是最高权限
+                <h1 id="一-搭建hexo博客"><a href="#一-搭建hexo博客" class="headerlink" title="一.搭建hexo博客"></a>一.搭建hexo博客</h1><h2 id="1-git指令"><a href="#1-git指令" class="headerlink" title="1.git指令"></a>1.git指令</h2><pre class=" language-c++"><code class="language-c++">在指令前加sudo是最高权限
 hexo clean清除缓存hexo g重新加载
 hexo init初始化
 hexo s静态生成本地网页
 hexo serve动态生成本地的网页
-hexo server <span class="token operator">-</span>p <span class="token function">4001</span> <span class="token punctuation">(</span>端口号<span class="token punctuation">)</span>
+hexo server -p 4001 (端口号)
 hexo new “标题”    生成博客文件
-hexo new page <span class="token string">"导航菜单名(英文)"</span> 生死导航栏文件 在 Blog\hexoblog\source里
+hexo new page "导航菜单名(英文)" 生死导航栏文件 在 Blog\hexoblog\source里
 hexo d推送到github    
     如遇到spown failed的错误
-    处理办法：将hexoblog中的<span class="token punctuation">.</span>deploy_git文件删除再上传
+    处理办法：将hexoblog中的.deploy_git文件删除再上传
 git rm 文件名名称    删除本地文件
-git rm <span class="token operator">-</span>r 文件夹<span class="token operator">/</span>      删除本地文件夹
+git rm -r 文件夹/      删除本地文件夹
 npm run 自定义指令字符串   
-    自定义指令在<span class="token operator">/</span>hexoblog<span class="token operator">/</span>package<span class="token punctuation">.</span>json文件的scripts后修改
-        格式为 <span class="token string">"自定义字符串"</span><span class="token punctuation">:</span> “hexo指令<span class="token punctuation">(</span>多个指令用<span class="token operator">&amp;&amp;</span>连接<span class="token punctuation">)</span>”         
+    自定义指令在/hexoblog/package.json文件的scripts后修改
+        格式为 "自定义字符串": “hexo指令(多个指令用&&连接)”         
 </code></pre>
-<h2 id="2-利用install-sh搭建hexo-script步骤"><a href="#2-利用install-sh搭建hexo-script步骤" class="headerlink" title="2.利用install.sh搭建hexo script步骤"></a>2.利用install.sh搭建hexo script步骤</h2><pre class=" language-c"><code class="language-c">前提：
+<h2 id="2-利用install-sh搭建hexo-script步骤"><a href="#2-利用install-sh搭建hexo-script步骤" class="headerlink" title="2.利用install.sh搭建hexo script步骤"></a>2.利用install.sh搭建hexo script步骤</h2><pre class=" language-c++"><code class="language-c++">前提：
     安装好nodejs和git
 在Blog文件夹内git
     运行：
-        source install<span class="token punctuation">.</span>sh hexo_win
+        source install.sh hexo_win
     测试：
-        source install<span class="token punctuation">.</span>sh test_git
-        source install<span class="token punctuation">.</span>sh test_node
-        source install<span class="token punctuation">.</span>sh <span class="token function">deploy</span>
-        <span class="token punctuation">(</span>返回版本号即为成功<span class="token punctuation">)</span>
-然后将up<span class="token punctuation">.</span>sh放入hexoblog文件夹
-在Blog<span class="token operator">/</span>hexoblog中git
-    下载插件<span class="token punctuation">:</span>
+        source install.sh test_git
+        source install.sh test_node
+        source install.sh deploy
+        (返回版本号即为成功)
+然后将up.sh放入hexoblog文件夹
+在Blog/hexoblog中git
+    下载插件:
         git init
-        npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save         
-        npm install <span class="token operator">-</span>g hexo         
-         npm update hexo <span class="token operator">-</span>g             #升级hexo
-        npm install <span class="token operator">-</span>S hexo<span class="token operator">-</span>prism<span class="token operator">-</span>plugin
-        npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
-        运行source up<span class="token punctuation">.</span>sh
+        npm install hexo-deployer-git --save         
+        npm install -g hexo         
+         npm update hexo -g             #升级hexo
+        npm install -S hexo-prism-plugin
+        npm install hexo-cli -g
+        运行source up.sh
 </code></pre>
 <h2 id="3-git配置SSH-key"><a href="#3-git配置SSH-key" class="headerlink" title="3.git配置SSH key"></a>3.git配置SSH key</h2><pre class=" language-c++"><code class="language-c++">1.先看本地是否配置好SSH key（命令：cd ~/.ssh）
   ssh配置好之后是保存到 c:/用户/Administrator/.ssh
@@ -582,96 +582,96 @@ password:    #设置密码
 ----------------------------------------------------------------------------
 </code></pre>
 <h1 id="三-博客配置"><a href="#三-博客配置" class="headerlink" title="三.博客配置"></a>三.博客配置</h1><h2 id="1-生成博客"><a href="#1-生成博客" class="headerlink" title="1.生成博客"></a>1.生成博客</h2><p>在hexoblog中git输入hexo new “文章标题”    生成博客文件<br>然后在文件的顶部添加模板，修改模板和简介内容即可</p>
-<h2 id="2-博客模板"><a href="#2-博客模板" class="headerlink" title="2.博客模板"></a>2.博客模板</h2><pre class=" language-c"><code class="language-c"><span class="token operator">--</span><span class="token operator">-</span>
-title<span class="token punctuation">:</span>                  #标题
-date<span class="token punctuation">:</span>                     #日期    
-author<span class="token punctuation">:</span> 乄尘封               #作者
-img<span class="token punctuation">:</span>                   #预览图的路径
-coverImg<span class="token punctuation">:</span>               #在首页的预览图
-top<span class="token punctuation">:</span> false                #是否置顶
-cover<span class="token punctuation">:</span> false            #在首页是否轮番播放
-toc<span class="token punctuation">:</span> true                    
-mathjax<span class="token punctuation">:</span> false            #数学公式模块
-password<span class="token punctuation">:</span>                #访问密码
-summary<span class="token punctuation">:</span>                 #描述<span class="token punctuation">(</span>用双引号包裹<span class="token punctuation">)</span>
-keywords<span class="token punctuation">:</span>                #关键词<span class="token punctuation">(</span>用来搜索<span class="token punctuation">)</span>
-tags<span class="token punctuation">:</span> blogs                    #标签<span class="token punctuation">(</span>用<span class="token punctuation">[</span><span class="token punctuation">]</span>包裹，多个标签用，号隔开<span class="token punctuation">)</span>
-categories<span class="token punctuation">:</span>             #分类
-<span class="token operator">--</span><span class="token operator">-</span>
-<span class="token punctuation">(</span>首尾用<span class="token operator">--</span><span class="token operator">-</span>包括<span class="token punctuation">,</span>位于博客文件的顶端<span class="token punctuation">)</span>
+<h2 id="2-博客模板"><a href="#2-博客模板" class="headerlink" title="2.博客模板"></a>2.博客模板</h2><pre class=" language-c++"><code class="language-c++">---
+title:                  #标题
+date:                     #日期    
+author: 乄尘封               #作者
+img:                   #预览图的路径
+coverImg:               #在首页的预览图
+top: false                #是否置顶
+cover: false            #在首页是否轮番播放
+toc: true                    
+mathjax: false            #数学公式模块
+password:                #访问密码
+summary:                 #描述(用双引号包裹)
+keywords:                #关键词(用来搜索)
+tags: blogs                    #标签(用[]包裹，多个标签用，号隔开)
+categories:             #分类
+---
+(首尾用---包括,位于博客文件的顶端)
 </code></pre>
 <h2 id="3-博客页美化"><a href="#3-博客页美化" class="headerlink" title="3.博客页美化"></a>3.博客页美化</h2><p>1.将所有的代码块都选c++语言</p>
 <h1 id="四-Matery主题个性化修改"><a href="#四-Matery主题个性化修改" class="headerlink" title="四.Matery主题个性化修改"></a>四.Matery主题个性化修改</h1><p>//都是在主题文件中进行修改</p>
-<h2 id="1-主页的遮幕"><a href="#1-主页的遮幕" class="headerlink" title="1.主页的遮幕"></a>1.主页的遮幕</h2><pre class=" language-c"><code class="language-c">在matery<span class="token punctuation">.</span>css中的rainbow相关的全部注释掉即可关闭
+<h2 id="1-主页的遮幕"><a href="#1-主页的遮幕" class="headerlink" title="1.主页的遮幕"></a>1.主页的遮幕</h2><pre class=" language-c++"><code class="language-c++">在matery.css中的rainbow相关的全部注释掉即可关闭
 </code></pre>
-<h2 id="2-修改主页横幅标题的字体："><a href="#2-修改主页横幅标题的字体：" class="headerlink" title="2.修改主页横幅标题的字体："></a>2.修改主页横幅标题的字体：</h2><pre class=" language-c"><code class="language-c">将字体文件放入到<span class="token operator">/</span>hexoflag<span class="token operator">/</span>source<span class="token operator">/</span>font文件夹中     
-<span class="token punctuation">(</span>没有font就新建<span class="token punctuation">,</span>字体文件可以在方正字库中下载<span class="token punctuation">)</span>
-然后在主题中的<span class="token operator">/</span>css<span class="token operator">/</span>my<span class="token punctuation">.</span>css中设置添加一下代码
-    @font<span class="token operator">-</span>face<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        font<span class="token operator">-</span>family<span class="token punctuation">:</span> <span class="token string">'字体'</span><span class="token punctuation">;</span>
-        src<span class="token punctuation">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'../font/字体.TTF'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token punctuation">.</span>diyFont<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        font<span class="token operator">-</span>family<span class="token punctuation">:</span> <span class="token string">'字体'</span><span class="token punctuation">,</span> serif<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-然后在\hexoblog\themes\matery<span class="token operator">-</span>master\layout\_partial\bg<span class="token operator">-</span>cover<span class="token operator">-</span>content<span class="token punctuation">.</span>ejs
-中修改class<span class="token operator">=</span><span class="token string">"title center-align diyFont"</span>
-     class<span class="token operator">=</span><span class="token string">"description center-align diyFont"</span>即可
-主标题文字在全局配置中 subtitle<span class="token punctuation">:</span>
-副标题文字在主题全局配置中 subtitle<span class="token punctuation">:</span>
+<h2 id="2-修改主页横幅标题的字体："><a href="#2-修改主页横幅标题的字体：" class="headerlink" title="2.修改主页横幅标题的字体："></a>2.修改主页横幅标题的字体：</h2><pre class=" language-c++"><code class="language-c++">将字体文件放入到/hexoflag/source/font文件夹中     
+(没有font就新建,字体文件可以在方正字库中下载)
+然后在主题中的/css/my.css中设置添加一下代码
+    @font-face&#123;
+        font-family: '字体';
+        src: url('../font/字体.TTF');
+    &#125;
+    .diyFont&#123;
+        font-family: '字体', serif;
+    &#125;
+然后在\hexoblog\themes\matery-master\layout\_partial\bg-cover-content.ejs
+中修改class="title center-align diyFont"
+     class="description center-align diyFont"即可
+主标题文字在全局配置中 subtitle:
+副标题文字在主题全局配置中 subtitle:
 </code></pre>
-<h2 id="3-主页上横幅的第二个按钮修改"><a href="#3-主页上横幅的第二个按钮修改" class="headerlink" title="3.主页上横幅的第二个按钮修改"></a>3.主页上横幅的第二个按钮修改</h2><pre class=" language-c"><code class="language-c">indexbtn<span class="token punctuation">:</span>    
+<h2 id="3-主页上横幅的第二个按钮修改"><a href="#3-主页上横幅的第二个按钮修改" class="headerlink" title="3.主页上横幅的第二个按钮修改"></a>3.主页上横幅的第二个按钮修改</h2><pre class=" language-c++"><code class="language-c++">indexbtn:    
 可设置是否开启，名字，链接
 </code></pre>
 <h2 id="4-主题全局配置"><a href="#4-主题全局配置" class="headerlink" title="4.主题全局配置"></a>4.主题全局配置</h2><p>在主题的全局配置文件_config.yml中修改(enable设置值为 false/true)</p>
-<h3 id="1-图片相关"><a href="#1-图片相关" class="headerlink" title="(1).图片相关"></a>(1).图片相关</h3><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>关于中我的相册
-    myGallery<span class="token punctuation">:</span> 
-      enable<span class="token punctuation">:</span> true<span class="token operator">/</span>false
-      data<span class="token punctuation">:</span> 
-          <span class="token operator">-</span> <span class="token operator">/</span>medias<span class="token operator">/</span>featureimages<span class="token operator">/</span>图片编号<span class="token punctuation">.</span>jpg
-  图片位置在<span class="token punctuation">:</span>themes<span class="token operator">/</span>matery<span class="token operator">-</span>master<span class="token operator">/</span>source<span class="token operator">/</span>medias<span class="token operator">/</span>featureimages中
-    添加图片时先将图片改名为编号，在去\_config<span class="token punctuation">.</span>yml文件中添加地址
+<h3 id="1-图片相关"><a href="#1-图片相关" class="headerlink" title="(1).图片相关"></a>(1).图片相关</h3><pre class=" language-c++"><code class="language-c++">1.关于中我的相册
+    myGallery: 
+      enable: true/false
+      data: 
+          - /medias/featureimages/图片编号.jpg
+  图片位置在:themes/matery-master/source/medias/featureimages中
+    添加图片时先将图片改名为编号，在去\_config.yml文件中添加地址
 
-    限<span class="token number">100</span>张，编号为<span class="token number">100</span><span class="token operator">-</span><span class="token number">199</span>
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+    限100张，编号为100-199
+----------------------------------------------------------------------------------------
 
-<span class="token number">2</span><span class="token punctuation">.</span>博客文章的预览图
-    featureImages<span class="token punctuation">:</span>
-    <span class="token operator">-</span> <span class="token operator">/</span>medias<span class="token operator">/</span>featureimages<span class="token operator">/</span>图片编号<span class="token punctuation">.</span>jpg
-  图片位置在<span class="token punctuation">:</span>themes<span class="token operator">/</span>matery<span class="token operator">-</span>master<span class="token operator">/</span>source<span class="token operator">/</span>medias<span class="token operator">/</span>featureimages中
-    添加图片时先将图片改名为编号，在去\_config<span class="token punctuation">.</span>yml文件中添加地址
+2.博客文章的预览图
+    featureImages:
+    - /medias/featureimages/图片编号.jpg
+  图片位置在:themes/matery-master/source/medias/featureimages中
+    添加图片时先将图片改名为编号，在去\_config.yml文件中添加地址
 
-    限<span class="token number">100</span>张，编号为<span class="token number">0</span><span class="token operator">-</span><span class="token number">99</span>
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> 
+    限100张，编号为0-99
+---------------------------------------------------------------------------------------- 
 
-<span class="token number">3</span><span class="token punctuation">.</span>主页背景图的修改
-    banner<span class="token punctuation">:</span> true<span class="token operator">/</span>false   #选择是否开启
-    背景图轮换方式<span class="token punctuation">:</span>在layout<span class="token operator">/</span>_partial<span class="token operator">/</span>bg<span class="token operator">-</span>cover<span class="token operator">-</span>content<span class="token punctuation">.</span>ejs中最下面new <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-    #关闭后默认为编号<span class="token number">0</span>的图片
-  图片位置在<span class="token punctuation">:</span>themes<span class="token operator">/</span>matery<span class="token operator">-</span>master<span class="token operator">/</span>source<span class="token operator">/</span>medias<span class="token operator">/</span>banner中 图片名均设置为编号
+3.主页背景图的修改
+    banner: true/false   #选择是否开启
+    背景图轮换方式:在layout/_partial/bg-cover-content.ejs中最下面new Date().getDay() 
+    #关闭后默认为编号0的图片
+  图片位置在:themes/matery-master/source/medias/banner中 图片名均设置为编号
 </code></pre>
-<h3 id="2-效果设置"><a href="#2-效果设置" class="headerlink" title="(2).效果设置"></a>(2).效果设置</h3><pre class=" language-c"><code class="language-c">点击爱心 clicklove<span class="token punctuation">:</span>
-点击爆炸 fireworks<span class="token punctuation">:</span>
+<h3 id="2-效果设置"><a href="#2-效果设置" class="headerlink" title="(2).效果设置"></a>(2).效果设置</h3><pre class=" language-c++"><code class="language-c++">点击爱心 clicklove:
+点击爆炸 fireworks:
 </code></pre>
-<h3 id="3-信息设置"><a href="#3-信息设置" class="headerlink" title="(3).信息设置"></a>(3).信息设置</h3><pre><code>网页标签名 title:    
+<h3 id="3-信息设置"><a href="#3-信息设置" class="headerlink" title="(3).信息设置"></a>(3).信息设置</h3><pre class=" language-c++"><code class="language-c++">网页标签名 title:    
 关于中的个人简介 profile:    
 我的梦想 dream:    
 </code></pre>
-<h2 id="5-导航页"><a href="#5-导航页" class="headerlink" title="5.导航页"></a>5.导航页</h2><pre class=" language-c"><code class="language-c">导航栏<span class="token punctuation">:</span>关于 分类 友情链接 标签
-都是在hexoblog<span class="token operator">/</span>source中建对应文件  about categories friend tags
-然后在各个文件夹类创建index<span class="token punctuation">.</span>md进行编辑<span class="token punctuation">,</span>添加以下代码
-    <span class="token operator">--</span><span class="token operator">-</span>
-    title<span class="token punctuation">:</span> about
-    date<span class="token punctuation">:</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">12</span><span class="token operator">-</span><span class="token number">18</span>
-    type<span class="token punctuation">:</span> <span class="token string">"about"</span>
-    layout<span class="token punctuation">:</span> <span class="token string">"about"</span>
-    <span class="token operator">--</span><span class="token operator">-</span>
-导航栏颜色修改：在主题中<span class="token operator">/</span>source<span class="token operator">/</span>css<span class="token operator">/</span>matery<span class="token punctuation">.</span>css中<span class="token punctuation">.</span>bg<span class="token operator">-</span>color修改
+<h2 id="5-导航页"><a href="#5-导航页" class="headerlink" title="5.导航页"></a>5.导航页</h2><pre class=" language-c++"><code class="language-c++">导航栏:关于 分类 友情链接 标签
+都是在hexoblog/source中建对应文件  about categories friend tags
+然后在各个文件夹类创建index.md进行编辑,添加以下代码
+    ---
+    title: about
+    date: 2021-12-18
+    type: "about"
+    layout: "about"
+    ---
+导航栏颜色修改：在主题中/source/css/matery.css中.bg-color修改
 </code></pre>
-<h2 id="6-主页上部的社交连接在"><a href="#6-主页上部的社交连接在" class="headerlink" title="6.主页上部的社交连接在"></a>6.主页上部的社交连接在</h2><pre class=" language-c"><code class="language-c">Blog\hexoblog\themes\matery<span class="token operator">-</span>master\layout\_partial中的socil<span class="token operator">-</span>link<span class="token punctuation">.</span>ejs中有模式
-主题全局配置文件\_config<span class="token punctuation">.</span>yml中的socilLink中更改链接
+<h2 id="6-主页上部的社交连接在"><a href="#6-主页上部的社交连接在" class="headerlink" title="6.主页上部的社交连接在"></a>6.主页上部的社交连接在</h2><pre class=" language-c++"><code class="language-c++">Blog\hexoblog\themes\matery-master\layout\_partial中的socil-link.ejs中有模式
+主题全局配置文件\_config.yml中的socilLink中更改链接
 </code></pre>
-<h2 id="7-主页底部的内容在"><a href="#7-主页底部的内容在" class="headerlink" title="7.主页底部的内容在"></a>7.主页底部的内容在</h2><pre class=" language-c"><code class="language-c">Blog\hexoblog\themes\matery<span class="token operator">-</span>master\layout\_partial中的footer<span class="token punctuation">.</span>ejs中修改
+<h2 id="7-主页底部的内容在"><a href="#7-主页底部的内容在" class="headerlink" title="7.主页底部的内容在"></a>7.主页底部的内容在</h2><pre class=" language-c++"><code class="language-c++">Blog\hexoblog\themes\matery-master\layout\_partial中的footer.ejs中修改
 </code></pre>
 
                 
