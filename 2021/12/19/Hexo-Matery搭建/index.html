@@ -506,18 +506,19 @@ npm run 自定义指令字符串
     自定义指令在<span class="token operator">/</span>hexoblog<span class="token operator">/</span>package<span class="token punctuation">.</span>json文件的scripts后修改
         格式为 <span class="token string">"自定义字符串"</span><span class="token punctuation">:</span> “hexo指令<span class="token punctuation">(</span>多个指令用<span class="token operator">&amp;&amp;</span>连接<span class="token punctuation">)</span>”         
 </code></pre>
-<h2 id="2-利用install-sh搭建hexo-script"><a href="#2-利用install-sh搭建hexo-script" class="headerlink" title="2.利用install.sh搭建hexo script"></a>2.利用install.sh搭建hexo script</h2><pre class=" language-c"><code class="language-c">前提：
+<h2 id="2-利用install-sh搭建hexo-script步骤"><a href="#2-利用install-sh搭建hexo-script步骤" class="headerlink" title="2.利用install.sh搭建hexo script步骤"></a>2.利用install.sh搭建hexo script步骤</h2><pre class=" language-c"><code class="language-c">前提：
     安装好nodejs和git
 在Blog文件夹内git
-运行：
-    source install<span class="token punctuation">.</span>sh hexo_win
-测试：
-    source install<span class="token punctuation">.</span>sh test_git
-    source install<span class="token punctuation">.</span>sh test_node
-    source install<span class="token punctuation">.</span>sh deploy
+    运行：
+        source install<span class="token punctuation">.</span>sh hexo_win
+    测试：
+        source install<span class="token punctuation">.</span>sh test_git
+        source install<span class="token punctuation">.</span>sh test_node
+        source install<span class="token punctuation">.</span>sh <span class="token function">deploy</span>
+        <span class="token punctuation">(</span>返回版本号即为成功<span class="token punctuation">)</span>
 然后将up<span class="token punctuation">.</span>sh放入hexoblog文件夹
 在Blog<span class="token operator">/</span>hexoblog中git
-    下载插件
+    下载插件<span class="token punctuation">:</span>
         git init
         npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save         
         npm install <span class="token operator">-</span>g hexo         
@@ -526,31 +527,61 @@ npm run 自定义指令字符串
         npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
         运行source up<span class="token punctuation">.</span>sh
 </code></pre>
-<h2 id="3-图床"><a href="#3-图床" class="headerlink" title="3.图床"></a>3.图床</h2><pre class=" language-c"><code class="language-c">图床作用：保存博客里的图片到云端
-安装picgo配置图床设置
-    <span class="token number">1</span><span class="token punctuation">.</span>在github<span class="token operator">/</span>settings<span class="token operator">/</span>Devloper settings新建token并勾选repo
-    <span class="token number">2</span><span class="token punctuation">.</span>写入配置
-    <span class="token number">3</span><span class="token punctuation">.</span>在picgo里面上传博客需要用到的图片文件即可 然后复制链接在博客文章里使用
+<h2 id="3-git配置SSH-key"><a href="#3-git配置SSH-key" class="headerlink" title="3.git配置SSH key"></a>3.git配置SSH key</h2><pre class=" language-c++"><code class="language-c++">1.先看本地是否配置好SSH key（命令：cd ~/.ssh）
+  ssh配置好之后是保存到 c:/用户/Administrator/.ssh
+  若不能找到该文件夹则说明没配置
+2.先生成ssh key
+  输入生成命令：ssh-keygen -t rsa -C "github账号绑定的邮件地址"
+  连续回车四次即可
+  进入到ssh文件夹，复制id_rsa.pub文件里全部内容
+  接着打开github主页，点击个人设置，点击左侧的SSH and GPG keys，点击New SSH key
+  将id_rsa.pub复制的内容粘贴到key中，title随便
+  点击 Add SSH key
+3.测试是否成功：
+    ssh -T git@github.com
+    输入测试命令后，接着输入yes
+4.配置账号和密码:
+  $ git config --global user.name " "     #github用户名
+  $ git config --global user.email " "     #填写github注册邮箱
 </code></pre>
-<h1 id="二-Hexo全局配置修改"><a href="#二-Hexo全局配置修改" class="headerlink" title="二.Hexo全局配置修改"></a>二.Hexo全局配置修改</h1><p>//在hexoblog根目录中的_config.yml修改</p>
-<pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>基本信息
-title<span class="token punctuation">:</span> ChenfengDream     #网页标签名
-data<span class="token punctuation">:</span> <span class="token number">2021</span><span class="token operator">-</span><span class="token number">12</span><span class="token operator">-</span><span class="token number">17</span>     #存在开始日期
-subtitle<span class="token punctuation">:</span> 挑战即巅峰     #副标题
-description<span class="token punctuation">:</span> <span class="token string">''</span>
-keywords<span class="token punctuation">:</span>
-author<span class="token punctuation">:</span> 乄尘封     #作者
-language<span class="token punctuation">:</span> zh<span class="token operator">-</span>CN
-timezone<span class="token punctuation">:</span> <span class="token string">''</span>
-toc<span class="token punctuation">:</span> false
-mathjax<span class="token punctuation">:</span> false
-top<span class="token punctuation">:</span> true     #是否置顶
-cover<span class="token punctuation">:</span> true
-avatar<span class="token punctuation">:</span> <span class="token operator">/</span>public<span class="token operator">/</span>medias<span class="token operator">/</span>favicon<span class="token punctuation">.</span>ico         #网站图标
-password<span class="token punctuation">:</span>    #设置密码
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<h2 id="4-新建github仓库"><a href="#4-新建github仓库" class="headerlink" title="4.新建github仓库"></a>4.新建github仓库</h2><pre class=" language-c++"><code class="language-c++">仓库名设置为
+用户名.github.io.git
+然后更改\hexoblog\_config.yml文件中的设置
+    deploy:
+          type: git
+          repository: https://github.com/用户名/用户名.github.io.git
+          branch: main
 </code></pre>
-<h1 id="三-博客全局配置修改"><a href="#三-博客全局配置修改" class="headerlink" title="三.博客全局配置修改"></a>三.博客全局配置修改</h1><h2 id="1-生成博客"><a href="#1-生成博客" class="headerlink" title="1.生成博客"></a>1.生成博客</h2><p>在hexoblog中git输入hexo new “标题”    生成博客文件<br>然后在文件的顶部添加模板，修改模板，简介内容即可</p>
+<h2 id="5-安装图床并更换主题"><a href="#5-安装图床并更换主题" class="headerlink" title="5.安装图床并更换主题"></a>5.安装图床并更换主题</h2><pre class=" language-c++"><code class="language-c++">图床作用：保存博客里的图片到云端，使得写博客时插入的图片链接有效
+下载安装picgo并配置图床设置
+    1.在github/settings/Devloper settings新建token并勾选repo
+    2.写入配置
+    3.在picgo里面上传博客需要用到的图片文件即可 然后复制链接在博客文章里使用
+</code></pre>
+<h2 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6.更换主题"></a>6.更换主题</h2><pre class=" language-c++"><code class="language-c++">将主题文件夹放入\hexoblog\themes文件夹中，并更改\hexoblog\_config.yml文件中的以下设置
+      theme: 主题文件夹名
+</code></pre>
+<h1 id="二-Hexo全局配置"><a href="#二-Hexo全局配置" class="headerlink" title="二.Hexo全局配置"></a>二.Hexo全局配置</h1><pre><code># 修改
+//在hexoblog根目录中的\_config.yml修改
+​```c
+1.基本信息
+title: ChenfengDream     #网页标签名
+data: 2021-12-17     #存在开始日期
+subtitle: 挑战即是巅峰     #副标题
+description: &#39;&#39;
+keywords:
+author: 乄尘封     #作者
+language: zh-CN
+timezone: &#39;&#39;
+toc: false
+mathjax: false
+top: true     #是否置顶
+cover: true
+avatar: /public/medias/favicon.ico         #网站图标
+password:    #设置密码
+----------------------------------------------------------------------------
+</code></pre>
+<h1 id="三-博客配置"><a href="#三-博客配置" class="headerlink" title="三.博客配置"></a>三.博客配置</h1><h2 id="1-生成博客"><a href="#1-生成博客" class="headerlink" title="1.生成博客"></a>1.生成博客</h2><p>在hexoblog中git输入hexo new “文章标题”    生成博客文件<br>然后在文件的顶部添加模板，修改模板和简介内容即可</p>
 <h2 id="2-博客模板"><a href="#2-博客模板" class="headerlink" title="2.博客模板"></a>2.博客模板</h2><pre class=" language-c"><code class="language-c"><span class="token operator">--</span><span class="token operator">-</span>
 title<span class="token punctuation">:</span>                  #标题
 date<span class="token punctuation">:</span>                     #日期    
@@ -569,8 +600,8 @@ categories<span class="token punctuation">:</span>             #分类
 <span class="token operator">--</span><span class="token operator">-</span>
 <span class="token punctuation">(</span>首尾用<span class="token operator">--</span><span class="token operator">-</span>包括<span class="token punctuation">,</span>位于博客文件的顶端<span class="token punctuation">)</span>
 </code></pre>
-<h2 id="3-博客页美化"><a href="#3-博客页美化" class="headerlink" title="3.博客页美化"></a>3.博客页美化</h2><p>1.将所有的代码块都选c语言</p>
-<h1 id="四-主题个性化修改"><a href="#四-主题个性化修改" class="headerlink" title="四.主题个性化修改"></a>四.主题个性化修改</h1><p>//都是在主题文件中进行修改</p>
+<h2 id="3-博客页美化"><a href="#3-博客页美化" class="headerlink" title="3.博客页美化"></a>3.博客页美化</h2><p>1.将所有的代码块都选c++语言</p>
+<h1 id="四-Matery主题个性化修改"><a href="#四-Matery主题个性化修改" class="headerlink" title="四.Matery主题个性化修改"></a>四.Matery主题个性化修改</h1><p>//都是在主题文件中进行修改</p>
 <h2 id="1-主页的遮幕"><a href="#1-主页的遮幕" class="headerlink" title="1.主页的遮幕"></a>1.主页的遮幕</h2><pre class=" language-c"><code class="language-c">在matery<span class="token punctuation">.</span>css中的rainbow相关的全部注释掉即可关闭
 </code></pre>
 <h2 id="2-修改主页横幅标题的字体："><a href="#2-修改主页横幅标题的字体：" class="headerlink" title="2.修改主页横幅标题的字体："></a>2.修改主页横幅标题的字体：</h2><pre class=" language-c"><code class="language-c">将字体文件放入到<span class="token operator">/</span>hexoflag<span class="token operator">/</span>source<span class="token operator">/</span>font文件夹中     
