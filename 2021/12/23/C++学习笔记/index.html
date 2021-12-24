@@ -499,7 +499,7 @@ coust在\*号后修饰的指针,其指向不可变,但其指向的值可变---�
 索引：即为序列位置(如数组的下标+1)
 枚举类型的定义: enum 枚举名&#123;枚举元素1,枚举元素2,........&#125;;   默认从第一个元素开始值为0往后++        
     当对期中一个赋值后会改变其后面的值但不会改变前面的值 
-快速排序 sort()函数用法:
+快速排序: sort()函数用法:
     sort(first,last);  对一个数组从first开始道last结束进行排序
 </code></pre>
 <h2 id="2-多文件管理"><a href="#2-多文件管理" class="headerlink" title="2.多文件管理"></a>2.多文件管理</h2><p>头文件中写函数声明<br>源文件中写函数定义</p>
@@ -591,7 +591,36 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 
 
 </code></pre>
-<h1 id="三-C-标准库函数"><a href="#三-C-标准库函数" class="headerlink" title="三.C++标准库函数"></a>三.C++标准库函数</h1><pre class=" language-c++"><code class="language-c++">1.万能库：<bits/stdc++.h>
+<h1 id="三-C-STL"><a href="#三-C-STL" class="headerlink" title="三.C++ STL"></a>三.C++ STL</h1><h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1.相关概念"></a>1.相关概念</h2><pre class=" language-c++"><code class="language-c++">1.STL概念
+    (1).STL含义：标准模板库
+    (2).广义上的分类：容器(container)  算法(algorithm)  迭代器(头文件名：iterator)
+    (3).容器和算法之间通过迭代器无缝连接
+2.STL六大组件
+    容器 算法 迭代器 仿函数 适配器 空间配置器
+3.容器
+    就是将广泛使用的数据结构实现为一个模板,方便使用
+      常见的数据结构：栈 队列 数组 链表 集合 映射表
+  分类：序列式容器-强调排序
+       关联式容器-无严格的顺序关系
+4.算法
+    分类：质变算法-改变元素内容
+         非质变算法-不改变元素内容
+5.迭代器
+    作用类似于指针
+    每一种容器都有一类迭代器
+</code></pre>
+<h2 id="2-容器"><a href="#2-容器" class="headerlink" title="2.容器"></a>2.容器</h2><pre class=" language-c++"><code class="language-c++">1.容器使用前要包含其对应头文件
+  容器定义方法： 容器类型<数据类型> 容器名;
+2.vector
+    头文件为 <vector>
+
+
+
+
+
+
+</code></pre>
+<h1 id="四-C-标准库函数"><a href="#四-C-标准库函数" class="headerlink" title="四.C++标准库函数"></a>四.C++标准库函数</h1><pre class=" language-c++"><code class="language-c++">1.万能库：<bits/stdc++.h>
 2.包含c语言函数库的写法：将.h省略并在库名前加上c
 3.IO流控制：<iostream> <iomanip>
 4.数学库：<cmath>
@@ -609,13 +638,9 @@ cin处理标准键盘输入 cout处理标准屏幕输出
             
             
             
-            
-            
-            
-            
-            
+           
 </code></pre>
-<h1 id="四-C语言标准库函数"><a href="#四-C语言标准库函数" class="headerlink" title="四.C语言标准库函数"></a>四.C语言标准库函数</h1><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">></span>
+<h1 id="五-C语言标准库函数"><a href="#五-C语言标准库函数" class="headerlink" title="五.C语言标准库函数"></a>五.C语言标准库函数</h1><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">></span>
 <span class="token number">2</span><span class="token punctuation">.</span>动态内存控制：<span class="token operator">&lt;</span>stdlib<span class="token punctuation">.</span>h<span class="token operator">></span>
 <span class="token number">3</span><span class="token punctuation">.</span>数学库：<span class="token operator">&lt;</span>math<span class="token punctuation">.</span>h<span class="token operator">></span>
 <span class="token number">4</span><span class="token punctuation">.</span>字符串处理库：<span class="token operator">&lt;</span>string<span class="token punctuation">.</span>h<span class="token operator">></span>
@@ -657,7 +682,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ChenfengDream.github.io/2021/12/23/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://ChenfengDream.github.io/2021/12/23/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
+                    <a href="https://ChenfengDream.github.io/2021/12/23/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://ChenfengDream.github.io/2021/12/23/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -745,7 +770,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/12/23/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/12/23/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
