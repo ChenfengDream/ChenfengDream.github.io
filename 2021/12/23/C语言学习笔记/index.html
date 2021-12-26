@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="c">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -37,7 +37,7 @@
 <body>
 
 
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
     <script type="text/javascript" src="/js/fireworks.js"></script>
 
@@ -484,439 +484,478 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h1><h2 id="1-头文件导入"><a href="#1-头文件导入" class="headerlink" title="1.头文件导入"></a>1.头文件导入</h2><pre class="language-c" data-language="c"><code class="language-c">   导入方法 #include &lt;标准库名&gt;  或 #include &quot;自定义库名&quot;
-   math.h	stdio.h	stdlib.h	string.h
-注意:
-      1.每一个.c文件的开头一定要有头文件&lt;stdio.h&gt;
-      2.一个项目只能有一个main()方法</code></pre>
-<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型:"></a>2.数据类型:</h2><pre class="language-c" data-language="c"><code class="language-c"> 1.整形: int,short,long,unsigned short,unsigned  int,unsigned long
- 2.浮点型: float,double
- 3.字符型: char,unsigned char
- 4.无值型: void
- 5.指针类型:
- 6.构造类型: 数组 结构体 联合体
-&#x2F;&#x2F;字节数(64位操作系统):char 1;  short 2;  int 4;  long 8;
-					 float 4;  double 8;  指针 8;
-&#x2F;&#x2F;别名创建格式: typedef 类型 别名;   (允许嵌套,且一个类型可以有多个别名)</code></pre>
-<h2 id="3-常量"><a href="#3-常量" class="headerlink" title="3.常量"></a>3.常量</h2><pre class="language-c" data-language="c"><code class="language-c">定义以后就无法改变的量
-  *定义符号常量: #define 常量名 常量值
-  *字符型常量: 用单引号 &#39;5&#39;储存的是其对应的ASCII码 53(D)           小写字母的ASCII码比大写字母的ASCII码大32
-  *字符串常量: 用双引号
-  十进制整型常量无开头
-  八进制整型常量以0开头
-  十六进制整型常量以0x开头
-  长整型常量以L做后缀
-  无符号常量以U做后缀</code></pre>
-<h2 id="4-转义字符"><a href="#4-转义字符" class="headerlink" title="4.转义字符"></a>4.转义字符</h2><pre class="language-c" data-language="c"><code class="language-c">\n是换行   \t是制表   \r是回车    \b是退格   \\是反斜线
-\&#39;是单引号   \“是双引号
-转义号\+字符对应ASCII码可以表示对应字符常量</code></pre>
-<h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><pre class="language-c" data-language="c"><code class="language-c">优先级: 单目&gt;双目
-  *自增自减 y&#x3D;x++ 为先赋值后x+1    y&#x3D;--x 为先x-1后赋值
+                <h1 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h1><h2 id="1-头文件导入"><a href="#1-头文件导入" class="headerlink" title="1.头文件导入"></a>1.头文件导入</h2><pre class=" language-c"><code class="language-c">   导入方法 #include <span class="token operator">&lt;</span>标准库名<span class="token operator">></span>  或 #include <span class="token string">"自定义库名"</span>
+   math<span class="token punctuation">.</span>h    stdio<span class="token punctuation">.</span>h    stdlib<span class="token punctuation">.</span>h    string<span class="token punctuation">.</span>h
+注意<span class="token punctuation">:</span>
+      <span class="token number">1</span><span class="token punctuation">.</span>每一个<span class="token punctuation">.</span>c文件的开头一定要有头文件<span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">></span>
+      <span class="token number">2</span><span class="token punctuation">.</span>一个项目只能有一个<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法
+</code></pre>
+<h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型:"></a>2.数据类型:</h2><pre class=" language-c"><code class="language-c">  <span class="token number">1</span><span class="token punctuation">.</span>整形<span class="token punctuation">:</span> <span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">short</span><span class="token punctuation">,</span><span class="token keyword">long</span><span class="token punctuation">,</span><span class="token keyword">unsigned</span> <span class="token keyword">short</span><span class="token punctuation">,</span><span class="token keyword">unsigned</span>  <span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">unsigned</span> <span class="token keyword">long</span>
+  <span class="token number">2</span><span class="token punctuation">.</span>浮点型<span class="token punctuation">:</span> <span class="token keyword">float</span><span class="token punctuation">,</span><span class="token keyword">double</span>
+  <span class="token number">3</span><span class="token punctuation">.</span>字符型<span class="token punctuation">:</span> <span class="token keyword">char</span><span class="token punctuation">,</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span>
+  <span class="token number">4</span><span class="token punctuation">.</span>无值型<span class="token punctuation">:</span> <span class="token keyword">void</span>
+  <span class="token number">5</span><span class="token punctuation">.</span>指针类型<span class="token punctuation">:</span>
+  <span class="token number">6</span><span class="token punctuation">.</span>构造类型<span class="token punctuation">:</span> 数组 结构体 联合体
+ <span class="token comment" spellcheck="true">//字节数(64位操作系统):char 1;  short 2;  int 4;  long 8;</span>
+                      <span class="token keyword">float</span> <span class="token number">4</span><span class="token punctuation">;</span>  <span class="token keyword">double</span> <span class="token number">8</span><span class="token punctuation">;</span>  指针 <span class="token number">8</span><span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">//别名创建格式: typedef 类型 别名;   (允许嵌套,且一个类型可以有多个别名)</span>
+</code></pre>
+<h2 id="3-常量"><a href="#3-常量" class="headerlink" title="3.常量"></a>3.常量</h2><pre class=" language-c"><code class="language-c"> 定义以后就无法改变的量
+   <span class="token operator">*</span>定义符号常量<span class="token punctuation">:</span> #define 常量名 常量值
+   <span class="token operator">*</span>字符型常量<span class="token punctuation">:</span> 用单引号 <span class="token string">'5'</span>储存的是其对应的ASCII码 <span class="token function">53</span><span class="token punctuation">(</span>D<span class="token punctuation">)</span>           小写字母的ASCII码比大写字母的ASCII码大<span class="token number">32</span>
+   <span class="token operator">*</span>字符串常量<span class="token punctuation">:</span> 用双引号
+   十进制整型常量无开头
+   八进制整型常量以<span class="token number">0</span>开头
+   十六进制整型常量以0x开头
+   长整型常量以L做后缀
+   无符号常量以U做后缀
+</code></pre>
+<h2 id="4-转义字符"><a href="#4-转义字符" class="headerlink" title="4.转义字符"></a>4.转义字符</h2><pre class=" language-c"><code class="language-c">   \n是换行   \t是制表   \r是回车    \b是退格   \\是反斜线
+   \'是单引号   \“是双引号
+   转义号\<span class="token operator">+</span>字符对应ASCII码可以表示对应字符常量
+</code></pre>
+<h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><pre class=" language-c"><code class="language-c"> 优先级<span class="token punctuation">:</span> 单目<span class="token operator">></span>双目
+   <span class="token operator">*</span>自增自减 y<span class="token operator">=</span>x<span class="token operator">++</span> 为先赋值后x<span class="token operator">+</span><span class="token number">1</span>    y<span class="token operator">=</span><span class="token operator">--</span>x 为先x<span class="token number">-1</span>后赋值
 
-  *逗号运算符: 用来连接多个表达式
-             优先级最低,结合性 从左到右,且以最后一个表达式的值为结果
-  *赋值复合运算符:
-          优先级仅仅大于逗号运算符
-          结合方向位 从右到左
-          格式: 变量名 算术或位运算符&#x3D; 表达式(表达式是一个整体的值)  变量名 &#x3D; 变量名 算数或位运算符 值;        
-  *赋值语句
-       变量名&#x3D;表达式
-       变量名1&#x3D;变量名2&#x3D;....&#x3D;表达式
-       (变量名1,变量名2,....)&#x3D;(变量名1,变量名2)
-       结构名2&#x3D;结构名2
-       结构名&#x3D;&#123;值1,值2,.......&#125;
-       变量名&#x3D;条件表达式?表达式T:表达式F</code></pre>
-<h2 id="6-变量和修饰符"><a href="#6-变量和修饰符" class="headerlink" title="6.变量和修饰符"></a>6.变量和修饰符</h2><pre class="language-c" data-language="c"><code class="language-c">1.类型转换: 低转高自动转 高转低要强转  格式为: (类型符)表达式;
- 赋值运算格式:  变量&#x3D;表达式
- &#x2F;&#x2F;赋值表达式最终的值是变量的值
- &#x2F;&#x2F;&#x2F;整数交换算法:  a +&#x3D;b;b &#x3D;a-b; a-&#x3D;b;
-2.修饰符
-  const
-  static</code></pre>
-<h1 id="二-输入输出"><a href="#二-输入输出" class="headerlink" title="二.输入输出"></a>二.输入输出</h1><h2 id="1-输出语句"><a href="#1-输出语句" class="headerlink" title="1.输出语句"></a>1.输出语句</h2><pre class="language-c" data-language="c"><code class="language-c">printf(格式控制字符串,输出项表)         输出项表可以是多个 常量，变量，表达式     格式控制字符串为&quot;格式说明(说明+%格式符)+字符+转义操作&quot;
-如: printf(&quot;(修饰符在格式符中间)格式符&quot;,对应变量)                                               
-	&#x2F;&#x2F;常用格式符: %d十进制数 %f小数 &amp;e指数型小数 %c单字符 %s字符串 &amp;p指针值
-	&#x2F;&#x2F;常用格式修饰符: m最小域宽 .n表示n位小数 -左对齐 l修饰d和f 0用在m前补0</code></pre>
-<h2 id="2-输入语句"><a href="#2-输入语句" class="headerlink" title="2.输入语句"></a>2.输入语句</h2><pre class="language-c" data-language="c"><code class="language-c">scanf(格式控制字符串,输入项地址表)    输入项地址格式为 &amp;变量名,每个地址用,隔开
-如: scanf(&quot;%d%f&quot;,%a,%b) 输入的每个值默认用空格隔开
-    &#x2F;&#x2F;多个scanf输入时 输入结束符可以是 空格 制表符 回车
-    &#x2F;&#x2F;常用格式符: %d十进制数 %f小数 &amp;e指数型小数 %c单字符 %s字符串 &amp;p指针值
-    &#x2F;&#x2F;常用修饰符: m最大长度 *跳过对应输入 l修饰d和f</code></pre>
-<h2 id="3-单字符输出函数"><a href="#3-单字符输出函数" class="headerlink" title="3.单字符输出函数"></a>3.单字符输出函数</h2><pre class="language-c" data-language="c"><code class="language-c">putchat(&#39;字符或整数(ASCII码)&#39;)</code></pre>
-<h2 id="4-单字符输入函数"><a href="#4-单字符输入函数" class="headerlink" title="4.单字符输入函数"></a>4.单字符输入函数</h2><pre class="language-c" data-language="c"><code class="language-c">getchar()  无参数,只是记录下次键盘输入的第一个字符
-语句 变量名 &#x3D;gerchar();</code></pre>
-<h1 id="三-流程控制"><a href="#三-流程控制" class="headerlink" title="三.流程控制"></a>三.流程控制</h1><h2 id="1-顺序结构（略）"><a href="#1-顺序结构（略）" class="headerlink" title="1.顺序结构（略）"></a>1.顺序结构（略）</h2><h2 id="2-选择结构"><a href="#2-选择结构" class="headerlink" title="2.选择结构"></a>2.选择结构</h2><pre class="language-c" data-language="c"><code class="language-c">关系运算: &#x3D;&#x3D; &lt; &gt; &lt;&#x3D; &#x3D;&gt; !&#x3D;                   &#x2F;&#x2F;对于浮点数的大小比较,要采用两数相减取绝对值(fabs函数)判断差值是否在要求的精度范围内
-      如: fabs(a-b)&lt;&#x3D;1e-6
-关系表达式的结果只有0或1     但任何非0数都是逻辑真
-逻辑运算符: 与&amp;&amp;  或||  非!(优先级最高,真假相反)        对于数字大小是但单区间的用&amp;&amp; 多区间的用||
-逻辑运算特殊规则: a &amp;&amp; b 只有a判断为真时才继续判断b以及运算表达式b
-               a || b 只有a判断为假时才继续判断b以及运算表达式b
-***条件运算(三目):优先级仅仅高于赋值运算符
-   格式为    表达式1？表达式2:表达式3     表达式1为真则整体结果为表达式2的值,表达式1为假则整体结果为表达式3的值
+   <span class="token operator">*</span>逗号运算符<span class="token punctuation">:</span> 用来连接多个表达式
+              优先级最低<span class="token punctuation">,</span>结合性 从左到右<span class="token punctuation">,</span>且以最后一个表达式的值为结果
+   <span class="token operator">*</span>赋值复合运算符<span class="token punctuation">:</span>
+           优先级仅仅大于逗号运算符
+           结合方向位 从右到左
+           格式<span class="token punctuation">:</span> 变量名 算术或位运算符<span class="token operator">=</span> 表达式<span class="token punctuation">(</span>表达式是一个整体的值<span class="token punctuation">)</span>  变量名 <span class="token operator">=</span> 变量名 算数或位运算符 值<span class="token punctuation">;</span>        
+   <span class="token operator">*</span>赋值语句
+        变量名<span class="token operator">=</span>表达式
+        变量名<span class="token number">1</span><span class="token operator">=</span>变量名<span class="token number">2</span><span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">=</span>表达式
+        <span class="token punctuation">(</span>变量名<span class="token number">1</span><span class="token punctuation">,</span>变量名<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span>变量名<span class="token number">1</span><span class="token punctuation">,</span>变量名<span class="token number">2</span><span class="token punctuation">)</span>
+        结构名<span class="token number">2</span><span class="token operator">=</span>结构名<span class="token number">2</span>
+        结构名<span class="token operator">=</span><span class="token punctuation">{</span>值<span class="token number">1</span><span class="token punctuation">,</span>值<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        变量名<span class="token operator">=</span>条件表达式<span class="token operator">?</span>表达式T<span class="token punctuation">:</span>表达式F
+</code></pre>
+<h2 id="6-变量和修饰符"><a href="#6-变量和修饰符" class="headerlink" title="6.变量和修饰符"></a>6.变量和修饰符</h2><pre class=" language-c"><code class="language-c">  <span class="token number">1</span><span class="token punctuation">.</span>类型转换<span class="token punctuation">:</span> 低转高自动转 高转低要强转  格式为<span class="token punctuation">:</span> <span class="token punctuation">(</span>类型符<span class="token punctuation">)</span>表达式<span class="token punctuation">;</span>
+   赋值运算格式<span class="token punctuation">:</span>  变量<span class="token operator">=</span>表达式
+   <span class="token comment" spellcheck="true">//赋值表达式最终的值是变量的值</span>
+   <span class="token comment" spellcheck="true">///整数交换算法:  a +=b;b =a-b; a-=b;</span>
+  <span class="token number">2</span><span class="token punctuation">.</span>修饰符
+    <span class="token keyword">const</span>
+    <span class="token keyword">static</span>
+</code></pre>
+<h1 id="二-输入输出"><a href="#二-输入输出" class="headerlink" title="二.输入输出"></a>二.输入输出</h1><h2 id="1-输出语句"><a href="#1-输出语句" class="headerlink" title="1.输出语句"></a>1.输出语句</h2><pre class=" language-c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span>格式控制字符串<span class="token punctuation">,</span>输出项表<span class="token punctuation">)</span>         输出项表可以是多个 常量，变量，表达式     格式控制字符串为<span class="token string">"格式说明(说明+%格式符)+字符+转义操作"</span>
+如<span class="token punctuation">:</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"(修饰符在格式符中间)格式符"</span><span class="token punctuation">,</span>对应变量<span class="token punctuation">)</span>                                               
+    <span class="token comment" spellcheck="true">//常用格式符: %d十进制数 %f小数 &amp;e指数型小数 %c单字符 %s字符串 &amp;p指针值</span>
+    <span class="token comment" spellcheck="true">//常用格式修饰符: m最小域宽 .n表示n位小数 -左对齐 l修饰d和f 0用在m前补0</span>
+</code></pre>
+<h2 id="2-输入语句"><a href="#2-输入语句" class="headerlink" title="2.输入语句"></a>2.输入语句</h2><pre class=" language-c"><code class="language-c"><span class="token function">scanf</span><span class="token punctuation">(</span>格式控制字符串<span class="token punctuation">,</span>输入项地址表<span class="token punctuation">)</span>    输入项地址格式为 <span class="token operator">&amp;</span>变量名<span class="token punctuation">,</span>每个地址用<span class="token punctuation">,</span>隔开
+如<span class="token punctuation">:</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%f"</span><span class="token punctuation">,</span><span class="token operator">%</span>a<span class="token punctuation">,</span><span class="token operator">%</span>b<span class="token punctuation">)</span> 输入的每个值默认用空格隔开
+    <span class="token comment" spellcheck="true">//多个scanf输入时 输入结束符可以是 空格 制表符 回车</span>
+    <span class="token comment" spellcheck="true">//常用格式符: %d十进制数 %f小数 &amp;e指数型小数 %c单字符 %s字符串 &amp;p指针值</span>
+    <span class="token comment" spellcheck="true">//常用修饰符: m最大长度 *跳过对应输入 l修饰d和f</span>
+</code></pre>
+<h2 id="3-单字符输出函数"><a href="#3-单字符输出函数" class="headerlink" title="3.单字符输出函数"></a>3.单字符输出函数</h2><pre class=" language-c"><code class="language-c"><span class="token function">putchat</span><span class="token punctuation">(</span><span class="token string">'字符或整数(ASCII码)'</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="4-单字符输入函数"><a href="#4-单字符输入函数" class="headerlink" title="4.单字符输入函数"></a>4.单字符输入函数</h2><pre class=" language-c"><code class="language-c"><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  无参数<span class="token punctuation">,</span>只是记录下次键盘输入的第一个字符
+语句 变量名 <span class="token operator">=</span><span class="token function">gerchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h1 id="三-流程控制"><a href="#三-流程控制" class="headerlink" title="三.流程控制"></a>三.流程控制</h1><h2 id="1-顺序结构（略）"><a href="#1-顺序结构（略）" class="headerlink" title="1.顺序结构（略）"></a>1.顺序结构（略）</h2><h2 id="2-选择结构"><a href="#2-选择结构" class="headerlink" title="2.选择结构"></a>2.选择结构</h2><pre class=" language-c"><code class="language-c">关系运算<span class="token punctuation">:</span> <span class="token operator">==</span> <span class="token operator">&lt;</span> <span class="token operator">></span> <span class="token operator">&lt;=</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">!=</span>                   <span class="token comment" spellcheck="true">//对于浮点数的大小比较,要采用两数相减取绝对值(fabs函数)判断差值是否在要求的精度范围内</span>
+      如<span class="token punctuation">:</span> <span class="token function">fabs</span><span class="token punctuation">(</span>a<span class="token operator">-</span>b<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1e-6</span>
+关系表达式的结果只有<span class="token number">0</span>或<span class="token number">1</span>     但任何非<span class="token number">0</span>数都是逻辑真
+逻辑运算符<span class="token punctuation">:</span> 与<span class="token operator">&amp;&amp;</span>  或<span class="token operator">||</span>  非<span class="token operator">!</span><span class="token punctuation">(</span>优先级最高<span class="token punctuation">,</span>真假相反<span class="token punctuation">)</span>        对于数字大小是但单区间的用<span class="token operator">&amp;&amp;</span> 多区间的用<span class="token operator">||</span>
+逻辑运算特殊规则<span class="token punctuation">:</span> a <span class="token operator">&amp;&amp;</span> b 只有a判断为真时才继续判断b以及运算表达式b
+               a <span class="token operator">||</span> b 只有a判断为假时才继续判断b以及运算表达式b
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>条件运算<span class="token punctuation">(</span>三目<span class="token punctuation">)</span><span class="token punctuation">:</span>优先级仅仅高于赋值运算符
+   格式为    表达式<span class="token number">1</span>？表达式<span class="token number">2</span><span class="token punctuation">:</span>表达式<span class="token number">3</span>     表达式<span class="token number">1</span>为真则整体结果为表达式<span class="token number">2</span>的值<span class="token punctuation">,</span>表达式<span class="token number">1</span>为假则整体结果为表达式<span class="token number">3</span>的值
 
-if语句用法
-  单分支if(表达式)&#123;&#125;          双分支if(表达式)&#123;&#125;else&#123;&#125;          多分支if(语句1)&#123;&#125;else if(语句2)&#123;&#125;else ......if(语句n)&#123;&#125;esle&#123;&#125;
-switch语句用法
-  switch(表达式)&#123;
-      case 表达式1:语句1;
-      break;
-      case 表达式2:语句2;
-      break;
-         .
-         .
-         .
-      case 表达式n:语句n;
-      break;
-      default:语句n;
-      break;
-  &#125;</code></pre>
-<h2 id="3-循环结构"><a href="#3-循环结构" class="headerlink" title="3.循环结构"></a>3.循环结构</h2><pre class="language-c" data-language="c"><code class="language-c">while语句
-    while(表达式)&#123;循环体&#125;
-do...while语句
-    do&#123;循环体&#125;while(表达式)         &#x2F;&#x2F;至少会执行一次
-for语句
-    for(int i &#x3D; 0;i&lt;9;i++)&#123;语句块..&#125;           &#x2F;&#x2F;枚(穷)举法
-break用来跳出当层循环            continue是跳过continue之后的语句进行下一次循环
+<span class="token keyword">if</span>语句用法
+  单分支<span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>          双分支<span class="token keyword">if</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token punctuation">}</span>          多分支<span class="token keyword">if</span><span class="token punctuation">(</span>语句<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>语句<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token keyword">if</span><span class="token punctuation">(</span>语句n<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>esle<span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">switch</span>语句用法
+  <span class="token keyword">switch</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">case</span> 表达式<span class="token number">1</span><span class="token punctuation">:</span>语句<span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> 表达式<span class="token number">2</span><span class="token punctuation">:</span>语句<span class="token number">2</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+         <span class="token punctuation">.</span>
+         <span class="token punctuation">.</span>
+         <span class="token punctuation">.</span>
+      <span class="token keyword">case</span> 表达式n<span class="token punctuation">:</span>语句n<span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">default</span><span class="token punctuation">:</span>语句n<span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="3-循环结构"><a href="#3-循环结构" class="headerlink" title="3.循环结构"></a>3.循环结构</h2><pre class=" language-c"><code class="language-c"><span class="token keyword">while</span>语句
+    <span class="token keyword">while</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>循环体<span class="token punctuation">}</span>
+<span class="token keyword">do</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token keyword">while</span>语句
+    <span class="token keyword">do</span><span class="token punctuation">{</span>循环体<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span>         <span class="token comment" spellcheck="true">//至少会执行一次</span>
+<span class="token keyword">for</span>语句
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">9</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>语句块<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>           <span class="token comment" spellcheck="true">//枚(穷)举法</span>
+<span class="token keyword">break</span>用来跳出当层循环            <span class="token keyword">continue</span>是跳过<span class="token keyword">continue</span>之后的语句进行下一次循环
 
-goto 标记名; 
-标记名:     goto可以使循序跳到指定位置</code></pre>
-<h1 id="四-函数的定义和调用"><a href="#四-函数的定义和调用" class="headerlink" title="四.函数的定义和调用"></a>四.函数的定义和调用</h1><h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><pre class="language-c" data-language="c"><code class="language-c">分类: 库函数和自定义函数
-  声明: 类型符 函数名(参数类型1,参数类型2,.......);           声明可以和定义变量放一起
-  定义: 类型符 函数名(定义形参1,定义形参2,.......)&#123;&#125;;         ******函数调用前一定要声明</code></pre>
-
-<h2 id="2-调用-函数名-实参"><a href="#2-调用-函数名-实参" class="headerlink" title="2.调用: 函数名(实参);"></a>2.调用: 函数名(实参);</h2><pre class="language-c" data-language="c"><code class="language-c">函数永远时单项值传递,且传入的实参中有表达式时,先从右向左算,再从左向右传入
-  &#x2F;&#x2F;函数多返回值可以用指针和全局变量进行操作
-  函数递归的要求: 终止条件 递归规则</code></pre>
-
-<h1 id="五-变量的作用域和存储类别"><a href="#五-变量的作用域和存储类别" class="headerlink" title="五.变量的作用域和存储类别"></a>五.变量的作用域和存储类别</h1><h2 id="1-作用域为变量起作用的范围"><a href="#1-作用域为变量起作用的范围" class="headerlink" title="1.作用域为变量起作用的范围"></a>1.作用域为变量起作用的范围</h2><pre class="language-c" data-language="c"><code class="language-c">分类:  局部变量-&gt;函数体或符合语句(语句块)内有效
-      全局变量-&gt;定义在函数之外,在定义后的函数中可以调用,但在局部中不可用</code></pre>
-
-<h2 id="2-存储类别"><a href="#2-存储类别" class="headerlink" title="2.存储类别"></a>2.存储类别</h2><pre class="language-c" data-language="c"><code class="language-c">分类: 静态--&gt;定义之后就一直存在,直到程序结束  用static修饰
-     动态--&gt;用完就消失
-关键字: auto 自动存储
-       register 寄存器
-       static 静态 (对于为赋于初值的变量,默认赋值为0)  不能跨文件调用
-       extern 外部   可以使在主函数外定义的变量在主函数中可以调用
-注意:   变量储存类型
-       局部变量定义后未初始化时输出为随机值
-       初始化定义变量时默认为auto(动态储存类型)
-       register(寄存器)型变量运算速度比auto快
-       全局变量为定义在所有函数之外的变量       </code></pre>
-
-<h1 id="六-预处理命令"><a href="#六-预处理命令" class="headerlink" title="六.预处理命令"></a>六.预处理命令</h1><h2 id="1-宏定义"><a href="#1-宏定义" class="headerlink" title="1.宏定义"></a>1.宏定义</h2><pre class="language-c" data-language="c"><code class="language-c">关键字: define
-  无参定义句法: #define 标识符 字符序列
-  有参定义句法: #define 标识符(参数列表) 字符序列
-  注意: 宏名不可以作为赋值对象  宏定义是将程序中宏名替换成对应的字  符序列  计算式尤其注意括号  标识符一般大写  宏定义没有赋值号和结尾号</code></pre>
-
-<h2 id="2-文件包含"><a href="#2-文件包含" class="headerlink" title="2.文件包含"></a>2.文件包含</h2><pre class="language-c" data-language="c"><code class="language-c">关键字: include
-包含句法: #include &lt;文件名&gt;    只在系统规定的路径中寻找
-         #include &quot;文件名&quot;    在当前文件中寻找</code></pre>
-
-<h2 id="3-条件编译"><a href="#3-条件编译" class="headerlink" title="3.条件编译"></a>3.条件编译</h2><pre class="language-c" data-language="c"><code class="language-c">1.#ifdef 标识符1
-	程序段1
-  [#else
-	程序段2]
-  #endif
-  作用:当标识符1被宏定义后,编译程序段1,否则编译程序段2
-2.#ifndef 标识符2
-  	程序段1
-  [#else
-	程序段2]
-  #endif
-  作用:当标识符2没有被定义时,编译程序段1,否则编译程序段2
-3.#if 逻辑量
-	程序段
-  [#else
-  	程序段]
-  #endif
-  作用:当逻辑量为真时,编译程序段1,否则编译程序段2</code></pre>
-
-<h1 id="七-数组"><a href="#七-数组" class="headerlink" title="七.数组"></a>七.数组</h1><h2 id="1-一维数组"><a href="#1-一维数组" class="headerlink" title="1.一维数组"></a>1.一维数组</h2><pre class="language-c" data-language="c"><code class="language-c">定义语句: 类型符 数组名[数组长度];数组第一个数据的下标为0
-初始化语句: 类型符 数组名&#x3D;&#123;&#125;
-引用语句: 数组名[下标]</code></pre>
-
-<h2 id="2-二维数组"><a href="#2-二维数组" class="headerlink" title="2.二维数组"></a>2.二维数组</h2><pre class="language-c" data-language="c"><code class="language-c">定义语句: 类型符 数组名[行数][列数]   
-		存储顺序为一行一行的  相当于每一个一维数组的数据存放了另一个一维数组
-初始化语句: 类型符 数组名&#x3D;&#123;&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&#125;        存储一一对应顺序时可以省略一维数组的花括号
-          部分特定设初值时 其余都默认赋值为0
-          全部设初值时常量1可以省略但常量2不可以
-引用语句: 数组名[下标1][下标2]
-注意: 在输出数组时不能添加换行符</code></pre>
-
-<h2 id="3-特点"><a href="#3-特点" class="headerlink" title="3.特点"></a>3.特点</h2><pre class="language-c" data-language="c"><code class="language-c">数组可以作为函数形参，此时数组相当与指针
+<span class="token keyword">goto</span> 标记名<span class="token punctuation">;</span> 
+标记名<span class="token punctuation">:</span>     <span class="token keyword">goto</span>可以使循序跳到指定位置
+</code></pre>
+<h1 id="四-函数的定义和调用"><a href="#四-函数的定义和调用" class="headerlink" title="四.函数的定义和调用"></a>四.函数的定义和调用</h1><h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><pre class=" language-c"><code class="language-c">分类<span class="token punctuation">:</span> 库函数和自定义函数
+  声明<span class="token punctuation">:</span> 类型符 函数名<span class="token punctuation">(</span>参数类型<span class="token number">1</span><span class="token punctuation">,</span>参数类型<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           声明可以和定义变量放一起
+  定义<span class="token punctuation">:</span> 类型符 函数名<span class="token punctuation">(</span>定义形参<span class="token number">1</span><span class="token punctuation">,</span>定义形参<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>         <span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>函数调用前一定要声明
+</code></pre>
+<h2 id="2-调用-函数名-实参"><a href="#2-调用-函数名-实参" class="headerlink" title="2.调用: 函数名(实参);"></a>2.调用: 函数名(实参);</h2><pre class=" language-c"><code class="language-c">函数永远时单项值传递<span class="token punctuation">,</span>且传入的实参中有表达式时<span class="token punctuation">,</span>先从右向左算<span class="token punctuation">,</span>再从左向右传入
+  <span class="token comment" spellcheck="true">//函数多返回值可以用指针和全局变量进行操作</span>
+  函数递归的要求<span class="token punctuation">:</span> 终止条件 递归规则
+</code></pre>
+<h1 id="五-变量的作用域和存储类别"><a href="#五-变量的作用域和存储类别" class="headerlink" title="五.变量的作用域和存储类别"></a>五.变量的作用域和存储类别</h1><h2 id="1-作用域为变量起作用的范围"><a href="#1-作用域为变量起作用的范围" class="headerlink" title="1.作用域为变量起作用的范围"></a>1.作用域为变量起作用的范围</h2><pre class=" language-c"><code class="language-c">分类<span class="token punctuation">:</span>  局部变量<span class="token operator">-></span>函数体或符合语句<span class="token punctuation">(</span>语句块<span class="token punctuation">)</span>内有效
+      全局变量<span class="token operator">-></span>定义在函数之外<span class="token punctuation">,</span>在定义后的函数中可以调用<span class="token punctuation">,</span>但在局部中不可用
+</code></pre>
+<h2 id="2-存储类别"><a href="#2-存储类别" class="headerlink" title="2.存储类别"></a>2.存储类别</h2><pre class=" language-c"><code class="language-c">  分类<span class="token punctuation">:</span> 静态<span class="token operator">--</span><span class="token operator">></span>定义之后就一直存在<span class="token punctuation">,</span>直到程序结束  用<span class="token keyword">static</span>修饰
+       动态<span class="token operator">--</span><span class="token operator">></span>用完就消失
+  关键字<span class="token punctuation">:</span> <span class="token keyword">auto</span> 自动存储
+         <span class="token keyword">register</span> 寄存器
+         <span class="token keyword">static</span> 静态 <span class="token punctuation">(</span>对于为赋于初值的变量<span class="token punctuation">,</span>默认赋值为<span class="token number">0</span><span class="token punctuation">)</span>  不能跨文件调用
+         <span class="token keyword">extern</span> 外部   可以使在主函数外定义的变量在主函数中可以调用
+  注意<span class="token punctuation">:</span>   变量储存类型
+         局部变量定义后未初始化时输出为随机值
+         初始化定义变量时默认为<span class="token keyword">auto</span><span class="token punctuation">(</span>动态储存类型<span class="token punctuation">)</span>
+         <span class="token keyword">register</span><span class="token punctuation">(</span>寄存器<span class="token punctuation">)</span>型变量运算速度比<span class="token keyword">auto</span>快
+         全局变量为定义在所有函数之外的变量       
+</code></pre>
+<h1 id="六-预处理命令"><a href="#六-预处理命令" class="headerlink" title="六.预处理命令"></a>六.预处理命令</h1><h2 id="1-宏定义"><a href="#1-宏定义" class="headerlink" title="1.宏定义"></a>1.宏定义</h2><pre class=" language-c"><code class="language-c">关键字<span class="token punctuation">:</span> define
+  无参定义句法<span class="token punctuation">:</span> #define 标识符 字符序列
+  有参定义句法<span class="token punctuation">:</span> #define 标识符<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span> 字符序列
+  注意<span class="token punctuation">:</span> 宏名不可以作为赋值对象  宏定义是将程序中宏名替换成对应的字  符序列  计算式尤其注意括号  标识符一般大写  宏定义没有赋值号和结尾号
+</code></pre>
+<h2 id="2-文件包含"><a href="#2-文件包含" class="headerlink" title="2.文件包含"></a>2.文件包含</h2><pre class=" language-c"><code class="language-c">关键字<span class="token punctuation">:</span> include
+包含句法<span class="token punctuation">:</span> #include <span class="token operator">&lt;</span>文件名<span class="token operator">></span>    只在系统规定的路径中寻找
+         <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"文件名"</span>    在当前文件中寻找</span>
+</code></pre>
+<h2 id="3-条件编译"><a href="#3-条件编译" class="headerlink" title="3.条件编译"></a>3.条件编译</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>#ifdef 标识符<span class="token number">1</span>
+    程序段<span class="token number">1</span>
+  <span class="token punctuation">[</span>#<span class="token keyword">else</span>
+    程序段<span class="token number">2</span><span class="token punctuation">]</span>
+  <span class="token macro property">#<span class="token directive keyword">endif</span></span>
+  作用<span class="token punctuation">:</span>当标识符<span class="token number">1</span>被宏定义后<span class="token punctuation">,</span>编译程序段<span class="token number">1</span><span class="token punctuation">,</span>否则编译程序段<span class="token number">2</span>
+<span class="token number">2</span><span class="token punctuation">.</span>#ifndef 标识符<span class="token number">2</span>
+      程序段<span class="token number">1</span>
+  <span class="token punctuation">[</span>#<span class="token keyword">else</span>
+    程序段<span class="token number">2</span><span class="token punctuation">]</span>
+  <span class="token macro property">#<span class="token directive keyword">endif</span></span>
+  作用<span class="token punctuation">:</span>当标识符<span class="token number">2</span>没有被定义时<span class="token punctuation">,</span>编译程序段<span class="token number">1</span><span class="token punctuation">,</span>否则编译程序段<span class="token number">2</span>
+<span class="token number">3</span><span class="token punctuation">.</span>#<span class="token keyword">if</span> 逻辑量
+    程序段
+  <span class="token punctuation">[</span>#<span class="token keyword">else</span>
+      程序段<span class="token punctuation">]</span>
+  <span class="token macro property">#<span class="token directive keyword">endif</span></span>
+  作用<span class="token punctuation">:</span>当逻辑量为真时<span class="token punctuation">,</span>编译程序段<span class="token number">1</span><span class="token punctuation">,</span>否则编译程序段<span class="token number">2</span>
+</code></pre>
+<h1 id="七-数组"><a href="#七-数组" class="headerlink" title="七.数组"></a>七.数组</h1><h2 id="1-一维数组"><a href="#1-一维数组" class="headerlink" title="1.一维数组"></a>1.一维数组</h2><pre class=" language-c"><code class="language-c">定义语句<span class="token punctuation">:</span> 类型符 数组名<span class="token punctuation">[</span>数组长度<span class="token punctuation">]</span><span class="token punctuation">;</span>数组第一个数据的下标为<span class="token number">0</span>
+初始化语句<span class="token punctuation">:</span> 类型符 数组名<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+引用语句<span class="token punctuation">:</span> 数组名<span class="token punctuation">[</span>下标<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="2-二维数组"><a href="#2-二维数组" class="headerlink" title="2.二维数组"></a>2.二维数组</h2><pre class=" language-c"><code class="language-c">定义语句<span class="token punctuation">:</span> 类型符 数组名<span class="token punctuation">[</span>行数<span class="token punctuation">]</span><span class="token punctuation">[</span>列数<span class="token punctuation">]</span>   
+        存储顺序为一行一行的  相当于每一个一维数组的数据存放了另一个一维数组
+初始化语句<span class="token punctuation">:</span> 类型符 数组名<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>        存储一一对应顺序时可以省略一维数组的花括号
+          部分特定设初值时 其余都默认赋值为<span class="token number">0</span>
+          全部设初值时常量<span class="token number">1</span>可以省略但常量<span class="token number">2</span>不可以
+引用语句<span class="token punctuation">:</span> 数组名<span class="token punctuation">[</span>下标<span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>下标<span class="token number">2</span><span class="token punctuation">]</span>
+注意<span class="token punctuation">:</span> 在输出数组时不能添加换行符
+</code></pre>
+<h2 id="3-特点"><a href="#3-特点" class="headerlink" title="3.特点"></a>3.特点</h2><pre class=" language-c"><code class="language-c">数组可以作为函数形参，此时数组相当与指针
 数组数据传入形参时是地址传递  形参的变化为实参有同样影响
-数组变量本身就是一个指针 表达地址</code></pre>
-
-<h1 id="八-指针"><a href="#八-指针" class="headerlink" title="八:指针"></a>八:指针</h1><h2 id="1-指针变量-用来存放目标变量的地址"><a href="#1-指针变量-用来存放目标变量的地址" class="headerlink" title="1.指针变量:用来存放目标变量的地址"></a>1.指针变量:用来存放目标变量的地址</h2><pre class="language-c" data-language="c"><code class="language-c">定义: 目标变量类型符 *指针变量名 &#x3D; 地址值(&amp;+目标变量名)    若地址值为0或NULL,则为空指针
-  注意: 赋值时指针变量名 不带*号  且*号只对最近的变量有效
+数组变量本身就是一个指针 表达地址
+</code></pre>
+<h1 id="八-指针"><a href="#八-指针" class="headerlink" title="八:指针"></a>八:指针</h1><h2 id="1-指针变量-用来存放目标变量的地址"><a href="#1-指针变量-用来存放目标变量的地址" class="headerlink" title="1.指针变量:用来存放目标变量的地址"></a>1.指针变量:用来存放目标变量的地址</h2><pre class=" language-c"><code class="language-c">定义<span class="token punctuation">:</span> 目标变量类型符 <span class="token operator">*</span>指针变量名 <span class="token operator">=</span> 地址值<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token operator">+</span>目标变量名<span class="token punctuation">)</span>    若地址值为<span class="token number">0</span>或<span class="token constant">NULL</span><span class="token punctuation">,</span>则为空指针
+  注意<span class="token punctuation">:</span> 赋值时指针变量名 不带<span class="token operator">*</span>号  且<span class="token operator">*</span>号只对最近的变量有效
        指针不能赋值常量 指针本身的值时地址值
-const在星号左边，如const char *p，则const修饰类型符,指针指向的内容不能改变
-const在星号右边，如char *const p，则const修饰指针,指针指向不可改变
-const在星号左边和右边，如const char const *p，表示p的指向不能改变，指向的变量内容也不能改变。</code></pre>
+<span class="token keyword">const</span>在星号左边，如<span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>p，则<span class="token keyword">const</span>修饰类型符<span class="token punctuation">,</span>指针指向的内容不能改变
+<span class="token keyword">const</span>在星号右边，如<span class="token keyword">char</span> <span class="token operator">*</span><span class="token keyword">const</span> p，则<span class="token keyword">const</span>修饰指针<span class="token punctuation">,</span>指针指向不可改变
+<span class="token keyword">const</span>在星号左边和右边，如<span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token keyword">const</span> <span class="token operator">*</span>p，表示p的指向不能改变，指向的变量内容也不能改变。
+</code></pre>
+<h2 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h2><pre class=" language-c"><code class="language-c">  取地址运算符<span class="token punctuation">:</span>    <span class="token operator">&amp;</span>用来获取目标变量的地址
+  直接访问运算符<span class="token punctuation">:</span>  <span class="token operator">*</span>获取目标变量的内容
+  运算符的关系例如下<span class="token punctuation">:</span>
+  <span class="token keyword">int</span> i<span class="token punctuation">,</span><span class="token operator">*</span>p<span class="token operator">=</span><span class="token operator">&amp;</span>i<span class="token punctuation">;</span>          p <span class="token operator">&amp;</span>i <span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span>等价            i <span class="token operator">*</span>p <span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>i<span class="token punctuation">)</span>等价
+  <span class="token comment" spellcheck="true">//对指针进行+(-)运算时 指针向后(前)移动n个对应类型的字节数</span>
+  <span class="token comment" spellcheck="true">//指针之间可以做减法 p1-p2的值为两地址之间数据的数量</span>
+</code></pre>
+<h2 id="3-指针一维数组"><a href="#3-指针一维数组" class="headerlink" title="3.指针一维数组"></a>3.指针一维数组</h2><pre class=" language-c"><code class="language-c">  定义<span class="token punctuation">:</span> 目标类型符 <span class="token punctuation">(</span><span class="token operator">*</span>指针名<span class="token punctuation">)</span><span class="token punctuation">[</span>数组长度<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">&amp;</span>数组名
+  指针地址对应关系<span class="token punctuation">:</span>  例如<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span>a<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                  a<span class="token operator">=</span>p<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>    <span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>p<span class="token operator">+</span>i<span class="token operator">=</span>a<span class="token operator">+</span>i
+  对于数组值的引用<span class="token punctuation">:</span>
+                  a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">*</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">+</span>i<span class="token punctuation">)</span>
 
-<h2 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h2><pre class="language-c" data-language="c"><code class="language-c">取地址运算符:    &amp;用来获取目标变量的地址
-直接访问运算符:  *获取目标变量的内容
-运算符的关系例如下:
-int i,*p&#x3D;&amp;i;          p &amp;i &amp;(*p)等价            i *p *(&amp;i)等价
-&#x2F;&#x2F;对指针进行+(-)运算时 指针向后(前)移动n个对应类型的字节数
-&#x2F;&#x2F;指针之间可以做减法 p1-p2的值为两地址之间数据的数量</code></pre>
-
-<h2 id="3-指针一维数组"><a href="#3-指针一维数组" class="headerlink" title="3.指针一维数组"></a>3.指针一维数组</h2><pre class="language-c" data-language="c"><code class="language-c">定义: 目标类型符 (*指针名)[数组长度] &#x3D; &amp;数组名
-指针地址对应关系:  例如int (*p)[5]&#x3D;&amp;a,a[5];
-                a&#x3D;p&#x3D;&amp;a[0]    &amp;a[i]&#x3D;p+i&#x3D;a+i
-对于数组值的引用:
-                a[i]&#x3D;*(p[i])&#x3D;*(a+i)
-
-&#x2F;&#x2F;p指向数组a[n]时 p[m]&#x3D;a[n+m] m&lt;0时且下标未越界仍有效</code></pre>
-
-<h2 id="4-指针二维数组"><a href="#4-指针二维数组" class="headerlink" title="4.指针二维数组"></a>4.指针二维数组</h2><pre class="language-c" data-language="c"><code class="language-c">&#x2F;&#x2F; 地址对应关系:  例如int a[i] [j];
-行指针定义: 一维数组指针可以指向二维数组的某一行
-          等价地址: a+i&#x3D;&amp;a[i]
-列指针定义: 等价地址: a[i]+j&#x3D;&amp;a[i][j]&#x3D;*(a+i)+j
-          等价内容: *(a[i]+j)&#x3D;a[i][j]&#x3D;*(*(a+i)+j)</code></pre>
-
-<h2 id="5-指针数组"><a href="#5-指针数组" class="headerlink" title="5.指针数组"></a>5.指针数组</h2><pre class="language-c" data-language="c"><code class="language-c">定义:   类型 *指针数组名[长度];
-&#x2F;&#x2F;数组中每个单元都是用来存放地址的</code></pre>
-<h2 id="6-指针函数"><a href="#6-指针函数" class="headerlink" title="6.指针函数"></a>6.指针函数</h2><pre class="language-c" data-language="c"><code class="language-c">1.指针做形参
-  类型符 函数名(*指针名, .....)&#123;&#125;
-  此时传入函数形参的值一定要是地址值,在该函数内可以简洁的访问传入的全局变量
-  数组就是一个特殊的指针
-  ### 指针传入函数时,形参和实参指向同一个目标,对实参和形参的影响都对目标起作用
-2.指向函数指针
-  定义: 返回值类型 (*指针名)(形参类型表列)&#x3D;函数名;
-  &#x2F;&#x2F;函数入口地址是函数体第一条指令的地址,可以用函数名引用
-  引用:函数指针()&#x3D;(*函数指针)()&#x3D;函数名()&#x3D;(*函数名)()&#x3D;(&amp;函数名)()
-3.返回指针值的函数
-  定义: 类型符 *函数名(形参)&#123;代码块&#125;</code></pre>
-<h2 id="7-指针与动态内存管理"><a href="#7-指针与动态内存管理" class="headerlink" title="7.指针与动态内存管理"></a>7.指针与动态内存管理</h2><pre class="language-c" data-language="c"><code class="language-c">&#x2F;&#x2F;调用相应函数需要预处理头文件&lt;stdlib.h&gt;
-&#x2F;&#x2F;这些函数只对指针有效
-    1.内存管理分配方式
-        ---静态: 编译时即分配空间,且内存空间有名字,可以利用变量名直接操作
-        ---动态: 程序执行时通过分配函数分配,但无名字,可以通过指针操作
-    2.动态申请内存空间函数malloc()
-        语法:  指针变量&#x3D;(对应基类型*)malloc(n*sizeof(基类型))
-        malloc()用来开辟指定字节数的连续内存空间,以此空间的首地址做为返回值
+  <span class="token comment" spellcheck="true">//p指向数组a[n]时 p[m]=a[n+m] m&lt;0时且下标未越界仍有效</span>
+</code></pre>
+<h2 id="4-指针二维数组"><a href="#4-指针二维数组" class="headerlink" title="4.指针二维数组"></a>4.指针二维数组</h2><pre class=" language-c"><code class="language-c"> <span class="token comment" spellcheck="true">// 地址对应关系:  例如int a[i] [j];</span>
+ 行指针定义<span class="token punctuation">:</span> 一维数组指针可以指向二维数组的某一行
+           等价地址<span class="token punctuation">:</span> a<span class="token operator">+</span>i<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+ 列指针定义<span class="token punctuation">:</span> 等价地址<span class="token punctuation">:</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>j<span class="token operator">=</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token operator">+</span>j
+           等价内容<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>j<span class="token punctuation">)</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token operator">+</span>j<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="5-指针数组"><a href="#5-指针数组" class="headerlink" title="5.指针数组"></a>5.指针数组</h2><pre class=" language-c"><code class="language-c">  定义<span class="token punctuation">:</span>   类型 <span class="token operator">*</span>指针数组名<span class="token punctuation">[</span>长度<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//数组中每个单元都是用来存放地址的</span>
+</code></pre>
+<h2 id="6-指针函数"><a href="#6-指针函数" class="headerlink" title="6.指针函数"></a>6.指针函数</h2><pre class=" language-c"><code class="language-c">  <span class="token number">1</span><span class="token punctuation">.</span>指针做形参
+    类型符 函数名<span class="token punctuation">(</span><span class="token operator">*</span>指针名<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    此时传入函数形参的值一定要是地址值<span class="token punctuation">,</span>在该函数内可以简洁的访问传入的全局变量
+    数组就是一个特殊的指针
+    ### 指针传入函数时<span class="token punctuation">,</span>形参和实参指向同一个目标<span class="token punctuation">,</span>对实参和形参的影响都对目标起作用
+  <span class="token number">2</span><span class="token punctuation">.</span>指向函数指针
+    定义<span class="token punctuation">:</span> 返回值类型 <span class="token punctuation">(</span><span class="token operator">*</span>指针名<span class="token punctuation">)</span><span class="token punctuation">(</span>形参类型表列<span class="token punctuation">)</span><span class="token operator">=</span>函数名<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//函数入口地址是函数体第一条指令的地址,可以用函数名引用</span>
+    引用<span class="token punctuation">:</span>函数指针<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">*</span>函数指针<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span>函数名<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">*</span>函数名<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>函数名<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token number">3</span><span class="token punctuation">.</span>返回指针值的函数
+    定义<span class="token punctuation">:</span> 类型符 <span class="token operator">*</span>函数名<span class="token punctuation">(</span>形参<span class="token punctuation">)</span><span class="token punctuation">{</span>代码块<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="7-指针与动态内存管理"><a href="#7-指针与动态内存管理" class="headerlink" title="7.指针与动态内存管理"></a>7.指针与动态内存管理</h2><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//调用相应函数需要预处理头文件&lt;stdlib.h></span>
+<span class="token comment" spellcheck="true">//这些函数只对指针有效</span>
+    <span class="token number">1</span><span class="token punctuation">.</span>内存管理分配方式
+        <span class="token operator">--</span><span class="token operator">-</span>静态<span class="token punctuation">:</span> 编译时即分配空间<span class="token punctuation">,</span>且内存空间有名字<span class="token punctuation">,</span>可以利用变量名直接操作
+        <span class="token operator">--</span><span class="token operator">-</span>动态<span class="token punctuation">:</span> 程序执行时通过分配函数分配<span class="token punctuation">,</span>但无名字<span class="token punctuation">,</span>可以通过指针操作
+    <span class="token number">2</span><span class="token punctuation">.</span>动态申请内存空间函数<span class="token function">malloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        语法<span class="token punctuation">:</span>  指针变量<span class="token operator">=</span><span class="token punctuation">(</span>对应基类型<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span>n<span class="token operator">*</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>基类型<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>用来开辟指定字节数的连续内存空间<span class="token punctuation">,</span>以此空间的首地址做为返回值
         对空间没有初始化
-        &#x2F;&#x2F;空间用完了之后,malloc返回值为0或NULL
-    3.动态申请内存空间函数calloc()
-        语法: 指针变量&#x3D;(对应基类型*)calloc(连续空间数,每个空间的字节长度)
-        对每一空间全部初始化为0
-    4.释放空间函数free()
-        free(指针变量)                
-        &#x2F;&#x2F;对于free()和realloc()函数只能对被申请过空间的指针有效
-        &#x2F;&#x2F;不能对同一个指针多次free
-    5.调整空间函数realloc()
-        新指针名&#x3D;(新对应基类型*)realloc(旧指针,改变后的长度)
-&#x2F;&#x2F;&#x2F;常用 sizeof函数来获取数据类型的字节数       
-&#x2F;&#x2F;&#x2F;手动给指针分配空间后,指针可以直接当作一个数组使用	</code></pre>
-
-
-
+        <span class="token comment" spellcheck="true">//空间用完了之后,malloc返回值为0或NULL</span>
+    <span class="token number">3</span><span class="token punctuation">.</span>动态申请内存空间函数<span class="token function">calloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        语法<span class="token punctuation">:</span> 指针变量<span class="token operator">=</span><span class="token punctuation">(</span>对应基类型<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">calloc</span><span class="token punctuation">(</span>连续空间数<span class="token punctuation">,</span>每个空间的字节长度<span class="token punctuation">)</span>
+        对每一空间全部初始化为<span class="token number">0</span>
+    <span class="token number">4</span><span class="token punctuation">.</span>释放空间函数<span class="token function">free</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">free</span><span class="token punctuation">(</span>指针变量<span class="token punctuation">)</span>                
+        <span class="token comment" spellcheck="true">//对于free()和realloc()函数只能对被申请过空间的指针有效</span>
+        <span class="token comment" spellcheck="true">//不能对同一个指针多次free</span>
+    <span class="token number">5</span><span class="token punctuation">.</span>调整空间函数<span class="token function">realloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        新指针名<span class="token operator">=</span><span class="token punctuation">(</span>新对应基类型<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">realloc</span><span class="token punctuation">(</span>旧指针<span class="token punctuation">,</span>改变后的长度<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">///常用 sizeof函数来获取数据类型的字节数       </span>
+<span class="token comment" spellcheck="true">///手动给指针分配空间后,指针可以直接当作一个数组使用    </span>
+</code></pre>
 <h1 id="九-处理字符串"><a href="#九-处理字符串" class="headerlink" title="九.处理字符串"></a>九.处理字符串</h1><p>  字符串被存放时会默认在其最后添加结束标志符\0 (非有效字符，但是该标识符占一个字节存储单元)</p>
-<h2 id="1-用字符数组表示字符串"><a href="#1-用字符数组表示字符串" class="headerlink" title="1.用字符数组表示字符串"></a>1.用字符数组表示字符串</h2><pre class="language-c" data-language="c"><code class="language-c">一维字符数组初始化: 1.char 数组名[长度]&#x3D;&#123;&#39;&#39;,&#39;&#39;,&#39;&#39;.........,&#125;            
-                 2.char 数组名[长度]&#x3D;&#123;&quot;字符串&quot;&#125;     &#123;&#125;可以省略
-字符串变量初始化:  char 字符串名[最大长度]&#x3D;&quot;.....\0&quot;;  
-&#x2F;&#x2F;当最大长度大于实际长度时\0可以省略    
-***初始化后 字符数组只能按元素赋值
-		   字符串不能赋值,只能通过字符串处理函数进行操作
-***若以指针来存放字符串,则可以在初始化后进行赋值,保存字符串的首地址
+<h2 id="1-用字符数组表示字符串"><a href="#1-用字符数组表示字符串" class="headerlink" title="1.用字符数组表示字符串"></a>1.用字符数组表示字符串</h2><pre class=" language-c"><code class="language-c">一维字符数组初始化<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">char</span> 数组名<span class="token punctuation">[</span>长度<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span><span class="token punctuation">}</span>            
+                 <span class="token number">2</span><span class="token punctuation">.</span><span class="token keyword">char</span> 数组名<span class="token punctuation">[</span>长度<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"字符串"</span><span class="token punctuation">}</span>     <span class="token punctuation">{</span><span class="token punctuation">}</span>可以省略
+字符串变量初始化<span class="token punctuation">:</span>  <span class="token keyword">char</span> 字符串名<span class="token punctuation">[</span>最大长度<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">".....\0"</span><span class="token punctuation">;</span>  
+<span class="token comment" spellcheck="true">//当最大长度大于实际长度时\0可以省略    </span>
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>初始化后 字符数组只能按元素赋值
+           字符串不能赋值<span class="token punctuation">,</span>只能通过字符串处理函数进行操作
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>若以指针来存放字符串<span class="token punctuation">,</span>则可以在初始化后进行赋值<span class="token punctuation">,</span>保存字符串的首地址
 
-二维字符数组初始化: 1.char 数组名[行数][列数]&#x3D;&#123;&#123;&#39;&#39;,..&#39;\0&#39;&#125;,&#123;&#39;&#39;,..&#39;\0&#39;&#125;...&#125;
-                 2.char 数组名[行数][列数]&#x3D;&#123;&quot;字符串&quot;,字符串&quot;...&#125;&#123;&#125;可以省略
-打印方式: printf(字符串数组名);printf(&quot;%s&quot;,字符串变量);
-&#x2F;&#x2F;若多个字符串之间没有任何符号,将会被自动连接
-&#x2F;&#x2F;字符串本身是常量指针,也是一个字符数组
-&#x2F;&#x2F;字符数组不等价于字符串
-  1.字符串有标记\0
-  2.字符串不能进行赋值,只能通过string.h库函数来处理修改字符串
-  3.字符串可以输入,相当于一个指针,输入时为替换目标位置之后的字符</code></pre>
-<h2 id="2-字符型指针"><a href="#2-字符型指针" class="headerlink" title="2.字符型指针"></a>2.字符型指针</h2><pre class="language-c" data-language="c"><code class="language-c">定义: char *指针名;
-初始化: char *指针名&#x3D;&amp;字符变量  或 char *指针名&#x3D;&quot;字符串&quot;
-    ***注意字符型指针不能指向字符常量,但是可以指向字符串常量,其代表的时字符串的首地址
-    ***用指针直接指向字符串时不能改变字符串本身的内容
-    ***利用指针输出字符串是输出指针指向的字符后的所有字符</code></pre>
-<h2 id="3-字符串的输入和输出"><a href="#3-字符串的输入和输出" class="headerlink" title="3.字符串的输入和输出"></a>3.字符串的输入和输出</h2><pre class="language-c" data-language="c"><code class="language-c">1.scanf(&quot;%s&quot;,字符串数组名)    
-  &#x2F;&#x2F;输入的字符串中的空格 制表符 回车都将被看作字符串的结束符
-  &#x2F;&#x2F;% s之间可以加整数n来限制读入的字符长度
-  printf(&quot;%s&quot;,字符串数组名)
-  对于scanf()函数可以用此格式来自定义结束符  scanf(&quot;%[^  ]&quot;,str1)
-2.字符串专用的输入输出函数
-  输入: gets(字符串数组名)   &#x2F;&#x2F;用回车来结束输入
-  输出: puts(字符串数组名 数组的指针名 字符串常量)   &#x2F;&#x2F;自动换行</code></pre>
-<h2 id="4-常用的字符串处理函数库-lt-string-h-gt"><a href="#4-常用的字符串处理函数库-lt-string-h-gt" class="headerlink" title="4.常用的字符串处理函数库&lt;string.h&gt;"></a>4.常用的字符串处理函数库&lt;string.h&gt;</h2><pre class="language-c" data-language="c"><code class="language-c">常用的字符串处理函数库&lt;string.h&gt;
-     1.求字符串长度函数 strlen(str)     &#x2F;&#x2F;字符串所占字节数&#x3D;字符串长度+1
-     2.复制字符串函数 strcpy(str1,str2或指针)  ----&gt;将str2的字符串复制给str1
-                                            ----&gt;当str2为指针时可以移动指针以达到复制指针位置以后的字符
-                    strncpy(str1,str2,n)    ----&gt;可以将str2的前n个字符复制给str1 但是此复制不自动包括结束符\0
-                    当n&gt;str1的长度时会自动补充结束符
-     3.连接字符串函数 strcat(str1,str2)   ----&gt;将两个字符串连接      
-     4.字符串比较函数 strcmp(str1,str2)   &#x2F;&#x2F;返回值为逻辑值1或0
-       对两字符串从左到右按对应字符的ASCII码值的大小进行比较,直到出现不同或\0
-     5.字母大小写转换符号 strlwr(str)  大变小
-                       strupr(str)  小变大
-     6.字符串查找函数  strstr(x,y)   在字符转x里查找字符串y的位置</code></pre>
-
-
-<h1 id="十-构造数据类型（相当于java的类）"><a href="#十-构造数据类型（相当于java的类）" class="headerlink" title="十.构造数据类型（相当于java的类）"></a>十.构造数据类型（相当于java的类）</h1><h2 id="1-定义结构体"><a href="#1-定义结构体" class="headerlink" title="1.定义结构体"></a>1.定义结构体</h2><pre class="language-c" data-language="c"><code class="language-c">关键字struct
-struct 结构体类型名
-&#123;
- 类型标识符 成员名;
- 类型标识符 成员名;    &#x2F;&#x2F;即属性
-       .
-       .
-       . 	
- 或者 struct 另一结构体名 成员名
-&#125;;</code></pre>
-<h2 id="2-定义结构体变量"><a href="#2-定义结构体变量" class="headerlink" title="2.定义结构体变量"></a>2.定义结构体变量</h2><pre class="language-c" data-language="c"><code class="language-c">1. struct 已经定义的结构体名 变量名1,变量名2 .....; 
-   &#x2F;&#x2F;如此结构体被定义的属性 都统一赋值给结构体变量1和2了
-   struct 结构体类型名&#123;成员变量&#125;结构体变量名1,2......;
-   &#x2F;&#x2F;定义结构体类型时不能初始化
-2. 定义别名
-   1.typedef struct 已经定义的结构体名 别名;
-   2.typedef struct&#123;成员变量...........&#125;别名;                  &#x2F;&#x2F;别名一般首字母大写
-   ****由此,再次定义结构体变量时可以简化语句                      别名 变量名1,变量名2......
+二维字符数组初始化<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">char</span> 数组名<span class="token punctuation">[</span>行数<span class="token punctuation">]</span><span class="token punctuation">[</span>列数<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token string">'\0'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token string">'\0'</span><span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+                 <span class="token number">2</span><span class="token punctuation">.</span><span class="token keyword">char</span> 数组名<span class="token punctuation">[</span>行数<span class="token punctuation">]</span><span class="token punctuation">[</span>列数<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"字符串"</span><span class="token punctuation">,</span>字符串"<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">}</span>可以省略
+打印方式<span class="token punctuation">:</span> <span class="token function">printf</span><span class="token punctuation">(</span>字符串数组名<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>字符串变量<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//若多个字符串之间没有任何符号,将会被自动连接</span>
+<span class="token comment" spellcheck="true">//字符串本身是常量指针,也是一个字符数组</span>
+<span class="token comment" spellcheck="true">//字符数组不等价于字符串</span>
+  <span class="token number">1</span><span class="token punctuation">.</span>字符串有标记\<span class="token number">0</span>
+  <span class="token number">2</span><span class="token punctuation">.</span>字符串不能进行赋值<span class="token punctuation">,</span>只能通过string<span class="token punctuation">.</span>h库函数来处理修改字符串
+  <span class="token number">3</span><span class="token punctuation">.</span>字符串可以输入<span class="token punctuation">,</span>相当于一个指针<span class="token punctuation">,</span>输入时为替换目标位置之后的字符
+</code></pre>
+<h2 id="2-字符型指针"><a href="#2-字符型指针" class="headerlink" title="2.字符型指针"></a>2.字符型指针</h2><pre class=" language-c"><code class="language-c">定义<span class="token punctuation">:</span> <span class="token keyword">char</span> <span class="token operator">*</span>指针名<span class="token punctuation">;</span>
+初始化<span class="token punctuation">:</span> <span class="token keyword">char</span> <span class="token operator">*</span>指针名<span class="token operator">=</span><span class="token operator">&amp;</span>字符变量  或 <span class="token keyword">char</span> <span class="token operator">*</span>指针名<span class="token operator">=</span><span class="token string">"字符串"</span>
+    <span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>注意字符型指针不能指向字符常量<span class="token punctuation">,</span>但是可以指向字符串常量<span class="token punctuation">,</span>其代表的时字符串的首地址
+    <span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>用指针直接指向字符串时不能改变字符串本身的内容
+    <span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>利用指针输出字符串是输出指针指向的字符后的所有字符
+</code></pre>
+<h2 id="3-字符串的输入和输出"><a href="#3-字符串的输入和输出" class="headerlink" title="3.字符串的输入和输出"></a>3.字符串的输入和输出</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>字符串数组名<span class="token punctuation">)</span>    
+  <span class="token comment" spellcheck="true">//输入的字符串中的空格 制表符 回车都将被看作字符串的结束符</span>
+  <span class="token comment" spellcheck="true">//% s之间可以加整数n来限制读入的字符长度</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>字符串数组名<span class="token punctuation">)</span>
+  对于<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>函数可以用此格式来自定义结束符  <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%[^  ]"</span><span class="token punctuation">,</span>str1<span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>字符串专用的输入输出函数
+  输入<span class="token punctuation">:</span> <span class="token function">gets</span><span class="token punctuation">(</span>字符串数组名<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//用回车来结束输入</span>
+  输出<span class="token punctuation">:</span> <span class="token function">puts</span><span class="token punctuation">(</span>字符串数组名 数组的指针名 字符串常量<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//自动换行</span>
+</code></pre>
+<h2 id="4-常用的字符串处理函数库-lt-string-h-gt"><a href="#4-常用的字符串处理函数库-lt-string-h-gt" class="headerlink" title="4.常用的字符串处理函数库&lt;string.h&gt;"></a>4.常用的字符串处理函数库&lt;string.h&gt;</h2><pre class=" language-c"><code class="language-c">常用的字符串处理函数库<span class="token operator">&lt;</span>string<span class="token punctuation">.</span>h<span class="token operator">></span>
+     <span class="token number">1</span><span class="token punctuation">.</span>求字符串长度函数 <span class="token function">strlen</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//字符串所占字节数=字符串长度+1</span>
+     <span class="token number">2</span><span class="token punctuation">.</span>复制字符串函数 <span class="token function">strcpy</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span>str2或指针<span class="token punctuation">)</span>  <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">></span>将str2的字符串复制给str1
+                                            <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">></span>当str2为指针时可以移动指针以达到复制指针位置以后的字符
+                    <span class="token function">strncpy</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span>str2<span class="token punctuation">,</span>n<span class="token punctuation">)</span>    <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">></span>可以将str2的前n个字符复制给str1 但是此复制不自动包括结束符\<span class="token number">0</span>
+                    当n<span class="token operator">></span>str1的长度时会自动补充结束符
+     <span class="token number">3</span><span class="token punctuation">.</span>连接字符串函数 <span class="token function">strcat</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span>str2<span class="token punctuation">)</span>   <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">></span>将两个字符串连接      
+     <span class="token number">4</span><span class="token punctuation">.</span>字符串比较函数 <span class="token function">strcmp</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span>str2<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//返回值为逻辑值1或0</span>
+       对两字符串从左到右按对应字符的ASCII码值的大小进行比较<span class="token punctuation">,</span>直到出现不同或\<span class="token number">0</span>
+     <span class="token number">5</span><span class="token punctuation">.</span>字母大小写转换符号 <span class="token function">strlwr</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>  大变小
+                       <span class="token function">strupr</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>  小变大
+     <span class="token number">6</span><span class="token punctuation">.</span>字符串查找函数  <span class="token function">strstr</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>   在字符转x里查找字符串y的位置
+</code></pre>
+<h1 id="十-构造数据类型（相当于java的类）"><a href="#十-构造数据类型（相当于java的类）" class="headerlink" title="十.构造数据类型（相当于java的类）"></a>十.构造数据类型（相当于java的类）</h1><h2 id="1-定义结构体"><a href="#1-定义结构体" class="headerlink" title="1.定义结构体"></a>1.定义结构体</h2><pre class=" language-c"><code class="language-c">关键字<span class="token keyword">struct</span>
+<span class="token keyword">struct</span> 结构体类型名
+<span class="token punctuation">{</span>
+ 类型标识符 成员名<span class="token punctuation">;</span>
+ 类型标识符 成员名<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//即属性</span>
+       <span class="token punctuation">.</span>
+       <span class="token punctuation">.</span>
+       <span class="token punctuation">.</span>     
+ 或者 <span class="token keyword">struct</span> 另一结构体名 成员名
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="2-定义结构体变量"><a href="#2-定义结构体变量" class="headerlink" title="2.定义结构体变量"></a>2.定义结构体变量</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span> <span class="token keyword">struct</span> 已经定义的结构体名 变量名<span class="token number">1</span><span class="token punctuation">,</span>变量名<span class="token number">2</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span> 
+   <span class="token comment" spellcheck="true">//如此结构体被定义的属性 都统一赋值给结构体变量1和2了</span>
+   <span class="token keyword">struct</span> 结构体类型名<span class="token punctuation">{</span>成员变量<span class="token punctuation">}</span>结构体变量名<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">//定义结构体类型时不能初始化</span>
+<span class="token number">2</span><span class="token punctuation">.</span> 定义别名
+   <span class="token number">1</span><span class="token punctuation">.</span><span class="token keyword">typedef</span> <span class="token keyword">struct</span> 已经定义的结构体名 别名<span class="token punctuation">;</span>
+   <span class="token number">2</span><span class="token punctuation">.</span><span class="token keyword">typedef</span> <span class="token keyword">struct</span><span class="token punctuation">{</span>成员变量<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>别名<span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true">//别名一般首字母大写</span>
+   <span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>由此<span class="token punctuation">,</span>再次定义结构体变量时可以简化语句                      别名 变量名<span class="token number">1</span><span class="token punctuation">,</span>变量名<span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
    但是定义别名不是创建新的结构体
-3.结构体变量初始化
-   别名 变量名 &#x3D; &#123;值1,值2,...&#125;    
-   &#x2F;&#x2F;这里的值要与成员名一一对应
-   &#x2F;&#x2F;初始化时各个成员按顺序初始化,各个数据项之间用逗号隔开</code></pre>
-<h2 id="3-结构体变量的引用"><a href="#3-结构体变量的引用" class="headerlink" title="3.结构体变量的引用"></a>3.结构体变量的引用</h2><pre class="language-c" data-language="c"><code class="language-c">1.结构体变量名.成员名       &#x2F;&#x2F;除开初始化,对属性赋值只能一一赋值
-2.同类型结构体变量之间可以整体赋值   结构体变量1&#x3D;结构体变量2
-3.结构体变量可以作为函数参数  &#x2F;&#x2F;传入时为一个整体  </code></pre>
-<h2 id="4-结构体数组"><a href="#4-结构体数组" class="headerlink" title="4.结构体数组"></a>4.结构体数组</h2><pre class="language-c" data-language="c"><code class="language-c">struct 结构体类型名 数组名[常量];
-初始化:*相当与对二维数组的初始化*
-      struct 结构体类型名 数组名[常量]&#x3D;&#123;&#123;属性1,属性2.....&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;............&#125;
-引用成员: 结构体数组名[下标].成员名;
-当结构体数组作为函数形参时,函数体内对形参的操作会影响外面传入的实参</code></pre>
-<h2 id="5-结构体指针变量"><a href="#5-结构体指针变量" class="headerlink" title="5.结构体指针变量"></a>5.结构体指针变量</h2><pre class="language-c" data-language="c"><code class="language-c">定义: struct 结构体名 *结构体指针变量名;
-初始化: struct 结构体名 *结构体指针变量名&#x3D;&amp;结构体变量          （用指针引用的是结构体变量中第一个成员）
-引用成员: 1.(*指针名).成员名
-         2.指针名-&gt;成员名   &#x2F;&#x2F;指向运算符-&gt;
-当结构体指针变量作为函数形参时,函数体内对形参的操作会影响实参
-将数组赋值给指针:   结构体指针&#x3D;结构体数组名; &#x2F;&#x2F;赋值结果为首地址
-***且指针移动是对数组下标的移动</code></pre>
-<h1 id="十一-共用体类型"><a href="#十一-共用体类型" class="headerlink" title="十一.共用体类型"></a>十一.共用体类型</h1><pre class="language-c" data-language="c"><code class="language-c">1.定义: union 共用体类型名&#123;类型标识符 成员名1,.....&#125;;
-2.共用体变量定义: union 已定义的共用体 变量名1,2,.....
-  union 共用体类型名&#123;类型标识符 成员名1,.....&#125;变量名1,2.....;
-3.共用体变量的初始化: 
-  union 已定义的共用体 变量名&#x3D;&#123;第一个成员的值&#125;           
-  &#x2F;&#x2F;只能定义第一个成员
-4.共用体与结构体的区别
-  共用体中的所有成员共用一个存储单元,该存储单元是最大的成员所属的单元,每次给共用体中的成员赋值</code></pre>
-<h1 id="十二-枚举类型"><a href="#十二-枚举类型" class="headerlink" title="十二.枚举类型"></a>十二.枚举类型</h1><pre class="language-c" data-language="c"><code class="language-c">定义: enum 枚举类型名&#123;枚举元素名1&#x3D;初值,枚举元素名2,........&#125;
-&#x2F;&#x2F;枚举元素是常量,不能更改它们的值,系统默认赋值依次为0 1 2 .....
-枚举类型变量定义: enum 已定义的枚举类型 变量名
-&#x2F;&#x2F;枚举类型变量常用于循环变量的条件,枚举类型常量常用于多分枝选择结构swith</code></pre>
-<h1 id="十三-链表"><a href="#十三-链表" class="headerlink" title="十三.链表"></a>十三.链表</h1><h2 id="1-链表的结构"><a href="#1-链表的结构" class="headerlink" title="1.链表的结构"></a>1.链表的结构</h2><pre class="language-c" data-language="c"><code class="language-c">链表是由一系列节点组成,一个节点由指针域和数据域组成
-头节点head 和 尾节点last 的指针域都为空</code></pre>
-<h2 id="2-链表节点的类型定义"><a href="#2-链表节点的类型定义" class="headerlink" title="2.链表节点的类型定义"></a>2.链表节点的类型定义</h2><pre class="language-c" data-language="c"><code class="language-c">节点本质是结构体类型,包含若干成员
-格式: struct 节点类型名&#123;数据成员定义;struct 节点结构体类型名 *指针变量名;&#125;</code></pre>
-<h2 id="3-创建链表"><a href="#3-创建链表" class="headerlink" title="3.创建链表"></a>3.创建链表</h2><pre class="language-c" data-language="c"><code class="language-c">插表头算法:
-	1.给头指针head赋值NULL
-	2.建立新节点,并把该节点的地址赋给指针变量p
-	3.如果head为NULL,则让新节点的next域设为NULL,再让head指向新节点,否则先将新节点指向那个 	节点,		  然后将head指针指向新节点
-	4.重复第2步继续建立新节点
-插表尾算法:
-	1.给头指针head赋值NULL
-	2.建立新节点,并把该节点的地址赋给指针变量p,将该节点的next指针设NULL
-	3.如果head为NULL,则让head指向新的节点,否则把这个新节点插到最后一个节点的后面
-	4.将last指针指向这个新节点
-	5.重复执行第2步建立新节点</code></pre>
-<h2 id="4-输出链表算法"><a href="#4-输出链表算法" class="headerlink" title="4.输出链表算法"></a>4.输出链表算法</h2><pre class="language-c" data-language="c"><code class="language-c">1.定义指针p,让p指向头节点
-2.输出p所指节点的数据
-3.使p后移一个节点(即指向next)
-4.若p不为空,则循环第2不;p为空,则结束</code></pre>
-<h2 id="5-链表的插入"><a href="#5-链表的插入" class="headerlink" title="5.链表的插入"></a>5.链表的插入</h2><h1 id="十四-文件操作"><a href="#十四-文件操作" class="headerlink" title="十四.文件操作"></a>十四.文件操作</h1><h2 id="1-文件分类和处理方法"><a href="#1-文件分类和处理方法" class="headerlink" title="1.文件分类和处理方法"></a>1.文件分类和处理方法</h2><pre class="language-c" data-language="c"><code class="language-c">分类: 根据储存介质不同分为- 普通文件(文件名.扩展名) 设备文件(键盘 显示器)
-     根据数据组织方式不同- 文本文件 二进制文件
-处理方法: 缓冲文件系统 非缓冲文件系统</code></pre>
-<h2 id="2-文件类型指针"><a href="#2-文件类型指针" class="headerlink" title="2.文件类型指针"></a>2.文件类型指针</h2><pre class="language-c" data-language="c"><code class="language-c">文件类型结构体FILE
-指针定义: FILE *指针名</code></pre>
-<h2 id="3-标准输入输出指针"><a href="#3-标准输入输出指针" class="headerlink" title="3.标准输入输出指针"></a>3.标准输入输出指针</h2><pre class="language-c" data-language="c"><code class="language-c">键盘输入 stidin 
-显示器输出 stdout
-错误输出 stderr</code></pre>
-<h2 id="4-文件的打开和关闭"><a href="#4-文件的打开和关闭" class="headerlink" title="4.文件的打开和关闭"></a>4.文件的打开和关闭</h2><pre class="language-c" data-language="c"><code class="language-c">文件的操作信息包括: 文件的名字.路径 操作方式
-操作方式常用的有 r只读 w只写 a在文件尾部追加 t打开文本文件 b打开二进制文件 +
-*其中+的用法: r+先读后写 w+先写后读 a+先追加后读取*
-文件说明符: 路径(正常的\变为\\)+文件的名字.扩展名
-1.打开方法(fopen 返回值为对应文件结构体的首地址)
-  文件结构体类型指针变量&#x3D;fopen(&quot;文件说明符&quot;,&quot;操作方式&quot;)
-2.关闭方法(fclose)
-  fclose(文件结构体类型指针) 关闭成功返回值为0 否则为非0的值</code></pre>
-<h2 id="5-顺序读写函数-前提是使用对应指针已经打开了一个文件"><a href="#5-顺序读写函数-前提是使用对应指针已经打开了一个文件" class="headerlink" title="5.顺序读写函数(前提是使用对应指针已经打开了一个文件)"></a>5.顺序读写函数(前提是使用对应指针已经打开了一个文件)</h2><h4 id="1-读字符函数-gt-返回一个字符-并将指针后移一个字节"><a href="#1-读字符函数-gt-返回一个字符-并将指针后移一个字节" class="headerlink" title="1.读字符函数-&gt; 返回一个字符,并将指针后移一个字节"></a>1.读字符函数-&gt; 返回一个字符,并将指针后移一个字节</h4><pre class="language-c" data-language="c"><code class="language-c">用法: 字符变量&#x3D;fgetc(文件结构体类型指针)
-	读取错误时返回标志EOF(-1)
-	可以用feof()避免识别二进制中的-1
- 		用法: 作为循环的条件 !feof(文件指针)</code></pre>
-<h4 id="2-写字符函数-gt-写成功返回字符-否则为EOF"><a href="#2-写字符函数-gt-写成功返回字符-否则为EOF" class="headerlink" title="2.写字符函数-&gt; 写成功返回字符 否则为EOF"></a>2.写字符函数-&gt; 写成功返回字符 否则为EOF</h4><pre class="language-c" data-language="c"><code class="language-c">用法: fputc(字符,文件指针)</code></pre>
-<h3 id="3-读字符串函数fgets"><a href="#3-读字符串函数fgets" class="headerlink" title="3.读字符串函数fgets()"></a>3.读字符串函数fgets()</h3><pre class="language-c" data-language="c"><code class="language-c">读取n-1个字符在字符串末尾加\0,每当读取的\n时结束并将指针后移,同样多个字符单位
-用法: fgets(字符数组变量,n,文件指针)</code></pre>
-<h4 id="4-写字符串函数-gt-写入时不包括-0"><a href="#4-写字符串函数-gt-写入时不包括-0" class="headerlink" title="4.写字符串函数-&gt; 写入时不包括\0"></a>4.写字符串函数-&gt; 写入时不包括\0</h4><pre class="language-c" data-language="c"><code class="language-c">用法: fputs(字符串,文件指针)</code></pre>
-<h4 id="5-格式化读取函数"><a href="#5-格式化读取函数" class="headerlink" title="5.格式化读取函数"></a>5.格式化读取函数</h4><pre class="language-c" data-language="c"><code class="language-c">用法: fsacnf(文件指针,格式控制,&amp;输入变量表列)
-字符串变量前不用加&amp;</code></pre>
-<h4 id="6-格式化写入"><a href="#6-格式化写入" class="headerlink" title="6.格式化写入"></a>6.格式化写入</h4><pre class="language-c" data-language="c"><code class="language-c">用法: fprintf(文件指针,格式控制,输出变量表列)</code></pre>
-<h4 id="7-数据块读取"><a href="#7-数据块读取" class="headerlink" title="7.数据块读取"></a>7.数据块读取</h4><pre class="language-c" data-language="c"><code class="language-c">用法:fread(新数据地址,n,数据项数目,文件类型指针)
-作用:读取文件指针中指定个数数据项,每个数据项读写n个字节数,并将数据存入新地址</code></pre>
-<h4 id="8-数据块写入"><a href="#8-数据块写入" class="headerlink" title="8.数据块写入"></a>8.数据块写入</h4><pre class="language-c" data-language="c"><code class="language-c">用法:fwrite(新数据地址,n,数据项数目,文件类型指针)
-作用:在文件指针中写入指定个数数据项,每个数据项写入n个字节数,并将数据存入新地址</code></pre>
-<h2 id="6-随机-定位-读写函数"><a href="#6-随机-定位-读写函数" class="headerlink" title="6.随机(定位)读写函数"></a>6.随机(定位)读写函数</h2><pre class="language-c" data-language="c"><code class="language-c">1.文件读写位置指针
-2.位置指针重返文件头函数
-  调用格式: rewind(文件类型指针)
-3.改变文件位置指针函数
-  调用格式: fseek(文件类型指针,偏移量,起始点)
-    起始点参数: SEEK_SET或0 -&gt;开始位置
-			  SEEK_CUR或1 -&gt;当前位置
-			  SEEK_END或2 -&gt;末尾
-4.查询文件位置指针
-  调用格式: ftell(文件类型指针) </code></pre>
-<h1 id="十五-位运算和可变数组"><a href="#十五-位运算和可变数组" class="headerlink" title="十五.位运算和可变数组"></a>十五.位运算和可变数组</h1><h2 id="1-位运算符-二进制数运算-如-01011101-位运算符-10111101"><a href="#1-位运算符-二进制数运算-如-01011101-位运算符-10111101" class="headerlink" title="1.位运算符: 二进制数运算  如 01011101 位运算符 10111101"></a>1.位运算符: 二进制数运算  如 01011101 位运算符 10111101</h2><pre class="language-c" data-language="c"><code class="language-c">逻辑位: &amp; 与:两位都为1则该位为1,否则为0
-       | 或 :两位同为0则该位为0,否则为1
-       ^ 异或:两位不同时为1,相同时为0   
-             规定: x^x&#x3D;0 0^x&#x3D;x x^y^y&#x3D;x
-       ~ 取反:各位的0变成1，1变成0</code></pre>
-<h2 id="2-定义数组结构体"><a href="#2-定义数组结构体" class="headerlink" title="2.定义数组结构体"></a>2.定义数组结构体</h2><pre class="language-c" data-language="c"><code class="language-c">typedef struct&#123;int *array;int size;&#125;Array;</code></pre>
-<h2 id="3-对应操作函数"><a href="#3-对应操作函数" class="headerlink" title="3.对应操作函数"></a>3.对应操作函数</h2><pre class="language-c" data-language="c"><code class="language-c">&#x2F;&#x2F;创建
-Array arrayCreat(int array_size)&#123;
-     Array a;
-     a.size&#x3D;array_size;
-     a.array&#x3D;(int*)malloc(sizeof(int) * a.size);
-     return a;
+<span class="token number">3</span><span class="token punctuation">.</span>结构体变量初始化
+   别名 变量名 <span class="token operator">=</span> <span class="token punctuation">{</span>值<span class="token number">1</span><span class="token punctuation">,</span>值<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>    
+   <span class="token comment" spellcheck="true">//这里的值要与成员名一一对应</span>
+   <span class="token comment" spellcheck="true">//初始化时各个成员按顺序初始化,各个数据项之间用逗号隔开</span>
+</code></pre>
+<h2 id="3-结构体变量的引用"><a href="#3-结构体变量的引用" class="headerlink" title="3.结构体变量的引用"></a>3.结构体变量的引用</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>结构体变量名<span class="token punctuation">.</span>成员名       <span class="token comment" spellcheck="true">//除开初始化,对属性赋值只能一一赋值</span>
+<span class="token number">2</span><span class="token punctuation">.</span>同类型结构体变量之间可以整体赋值   结构体变量<span class="token number">1</span><span class="token operator">=</span>结构体变量<span class="token number">2</span>
+<span class="token number">3</span><span class="token punctuation">.</span>结构体变量可以作为函数参数  <span class="token comment" spellcheck="true">//传入时为一个整体  </span>
+</code></pre>
+<h2 id="4-结构体数组"><a href="#4-结构体数组" class="headerlink" title="4.结构体数组"></a>4.结构体数组</h2><pre class=" language-c"><code class="language-c"><span class="token keyword">struct</span> 结构体类型名 数组名<span class="token punctuation">[</span>常量<span class="token punctuation">]</span><span class="token punctuation">;</span>
+初始化<span class="token punctuation">:</span><span class="token operator">*</span>相当与对二维数组的初始化<span class="token operator">*</span>
+      <span class="token keyword">struct</span> 结构体类型名 数组名<span class="token punctuation">[</span>常量<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>属性<span class="token number">1</span><span class="token punctuation">,</span>属性<span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+引用成员<span class="token punctuation">:</span> 结构体数组名<span class="token punctuation">[</span>下标<span class="token punctuation">]</span><span class="token punctuation">.</span>成员名<span class="token punctuation">;</span>
+当结构体数组作为函数形参时<span class="token punctuation">,</span>函数体内对形参的操作会影响外面传入的实参
+</code></pre>
+<h2 id="5-结构体指针变量"><a href="#5-结构体指针变量" class="headerlink" title="5.结构体指针变量"></a>5.结构体指针变量</h2><pre class=" language-c"><code class="language-c">定义<span class="token punctuation">:</span> <span class="token keyword">struct</span> 结构体名 <span class="token operator">*</span>结构体指针变量名<span class="token punctuation">;</span>
+初始化<span class="token punctuation">:</span> <span class="token keyword">struct</span> 结构体名 <span class="token operator">*</span>结构体指针变量名<span class="token operator">=</span><span class="token operator">&amp;</span>结构体变量          （用指针引用的是结构体变量中第一个成员）
+引用成员<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token operator">*</span>指针名<span class="token punctuation">)</span><span class="token punctuation">.</span>成员名
+         <span class="token number">2</span><span class="token punctuation">.</span>指针名<span class="token operator">-></span>成员名   <span class="token comment" spellcheck="true">//指向运算符-></span>
+当结构体指针变量作为函数形参时<span class="token punctuation">,</span>函数体内对形参的操作会影响实参
+将数组赋值给指针<span class="token punctuation">:</span>   结构体指针<span class="token operator">=</span>结构体数组名<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//赋值结果为首地址</span>
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>且指针移动是对数组下标的移动
+</code></pre>
+<h1 id="十一-共用体类型"><a href="#十一-共用体类型" class="headerlink" title="十一.共用体类型"></a>十一.共用体类型</h1><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>定义<span class="token punctuation">:</span> <span class="token keyword">union</span> 共用体类型名<span class="token punctuation">{</span>类型标识符 成员名<span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token number">2</span><span class="token punctuation">.</span>共用体变量定义<span class="token punctuation">:</span> <span class="token keyword">union</span> 已定义的共用体 变量名<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">union</span> 共用体类型名<span class="token punctuation">{</span>类型标识符 成员名<span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>变量名<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+<span class="token number">3</span><span class="token punctuation">.</span>共用体变量的初始化<span class="token punctuation">:</span> 
+  <span class="token keyword">union</span> 已定义的共用体 变量名<span class="token operator">=</span><span class="token punctuation">{</span>第一个成员的值<span class="token punctuation">}</span>           
+  <span class="token comment" spellcheck="true">//只能定义第一个成员</span>
+<span class="token number">4</span><span class="token punctuation">.</span>共用体与结构体的区别
+  共用体中的所有成员共用一个存储单元<span class="token punctuation">,</span>该存储单元是最大的成员所属的单元<span class="token punctuation">,</span>每次给共用体中的成员赋值
+</code></pre>
+<h1 id="十二-枚举类型"><a href="#十二-枚举类型" class="headerlink" title="十二.枚举类型"></a>十二.枚举类型</h1><pre class=" language-c"><code class="language-c">定义<span class="token punctuation">:</span> <span class="token keyword">enum</span> 枚举类型名<span class="token punctuation">{</span>枚举元素名<span class="token number">1</span><span class="token operator">=</span>初值<span class="token punctuation">,</span>枚举元素名<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//枚举元素是常量,不能更改它们的值,系统默认赋值依次为0 1 2 .....</span>
+枚举类型变量定义<span class="token punctuation">:</span> <span class="token keyword">enum</span> 已定义的枚举类型 变量名
+<span class="token comment" spellcheck="true">//枚举类型变量常用于循环变量的条件,枚举类型常量常用于多分枝选择结构swith</span>
+</code></pre>
+<h1 id="十三-链表"><a href="#十三-链表" class="headerlink" title="十三.链表"></a>十三.链表</h1><h2 id="1-链表的结构"><a href="#1-链表的结构" class="headerlink" title="1.链表的结构"></a>1.链表的结构</h2><pre class=" language-c"><code class="language-c"> 链表是由一系列节点组成<span class="token punctuation">,</span>一个节点由指针域和数据域组成
+ 头节点head 和 尾节点last 的指针域都为空
+</code></pre>
+<h2 id="2-链表节点的类型定义"><a href="#2-链表节点的类型定义" class="headerlink" title="2.链表节点的类型定义"></a>2.链表节点的类型定义</h2><pre class=" language-c"><code class="language-c"> 节点本质是结构体类型<span class="token punctuation">,</span>包含若干成员
+ 格式<span class="token punctuation">:</span> <span class="token keyword">struct</span> 节点类型名<span class="token punctuation">{</span>数据成员定义<span class="token punctuation">;</span><span class="token keyword">struct</span> 节点结构体类型名 <span class="token operator">*</span>指针变量名<span class="token punctuation">;</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="3-创建链表"><a href="#3-创建链表" class="headerlink" title="3.创建链表"></a>3.创建链表</h2><pre class=" language-c"><code class="language-c">插表头算法<span class="token punctuation">:</span>
+    <span class="token number">1</span><span class="token punctuation">.</span>给头指针head赋值<span class="token constant">NULL</span>
+    <span class="token number">2</span><span class="token punctuation">.</span>建立新节点<span class="token punctuation">,</span>并把该节点的地址赋给指针变量p
+    <span class="token number">3</span><span class="token punctuation">.</span>如果head为<span class="token constant">NULL</span><span class="token punctuation">,</span>则让新节点的next域设为<span class="token constant">NULL</span><span class="token punctuation">,</span>再让head指向新节点<span class="token punctuation">,</span>否则先将新节点指向那个     节点<span class="token punctuation">,</span>          然后将head指针指向新节点
+    <span class="token number">4</span><span class="token punctuation">.</span>重复第<span class="token number">2</span>步继续建立新节点
+插表尾算法<span class="token punctuation">:</span>
+    <span class="token number">1</span><span class="token punctuation">.</span>给头指针head赋值<span class="token constant">NULL</span>
+    <span class="token number">2</span><span class="token punctuation">.</span>建立新节点<span class="token punctuation">,</span>并把该节点的地址赋给指针变量p<span class="token punctuation">,</span>将该节点的next指针设<span class="token constant">NULL</span>
+    <span class="token number">3</span><span class="token punctuation">.</span>如果head为<span class="token constant">NULL</span><span class="token punctuation">,</span>则让head指向新的节点<span class="token punctuation">,</span>否则把这个新节点插到最后一个节点的后面
+    <span class="token number">4</span><span class="token punctuation">.</span>将last指针指向这个新节点
+    <span class="token number">5</span><span class="token punctuation">.</span>重复执行第<span class="token number">2</span>步建立新节点
+</code></pre>
+<h2 id="4-输出链表算法"><a href="#4-输出链表算法" class="headerlink" title="4.输出链表算法"></a>4.输出链表算法</h2><pre class=" language-c"><code class="language-c"> <span class="token number">1</span><span class="token punctuation">.</span>定义指针p<span class="token punctuation">,</span>让p指向头节点
+ <span class="token number">2</span><span class="token punctuation">.</span>输出p所指节点的数据
+ <span class="token number">3</span><span class="token punctuation">.</span>使p后移一个节点<span class="token punctuation">(</span>即指向next<span class="token punctuation">)</span>
+ <span class="token number">4</span><span class="token punctuation">.</span>若p不为空<span class="token punctuation">,</span>则循环第<span class="token number">2</span>不<span class="token punctuation">;</span>p为空<span class="token punctuation">,</span>则结束
+</code></pre>
+<h2 id="5-链表的插入"><a href="#5-链表的插入" class="headerlink" title="5.链表的插入"></a>5.链表的插入</h2><h1 id="十四-文件操作"><a href="#十四-文件操作" class="headerlink" title="十四.文件操作"></a>十四.文件操作</h1><h2 id="1-文件分类和处理方法"><a href="#1-文件分类和处理方法" class="headerlink" title="1.文件分类和处理方法"></a>1.文件分类和处理方法</h2><pre class=" language-c"><code class="language-c"> 分类<span class="token punctuation">:</span> 根据储存介质不同分为<span class="token operator">-</span> 普通文件<span class="token punctuation">(</span>文件名<span class="token punctuation">.</span>扩展名<span class="token punctuation">)</span> 设备文件<span class="token punctuation">(</span>键盘 显示器<span class="token punctuation">)</span>
+      根据数据组织方式不同<span class="token operator">-</span> 文本文件 二进制文件
+ 处理方法<span class="token punctuation">:</span> 缓冲文件系统 非缓冲文件系统
+</code></pre>
+<h2 id="2-文件类型指针"><a href="#2-文件类型指针" class="headerlink" title="2.文件类型指针"></a>2.文件类型指针</h2><pre class=" language-c"><code class="language-c"> 文件类型结构体FILE
+ 指针定义<span class="token punctuation">:</span> FILE <span class="token operator">*</span>指针名
+</code></pre>
+<h2 id="3-标准输入输出指针"><a href="#3-标准输入输出指针" class="headerlink" title="3.标准输入输出指针"></a>3.标准输入输出指针</h2><pre class=" language-c"><code class="language-c"> 键盘输入 stidin 
+ 显示器输出 <span class="token constant">stdout</span>
+ 错误输出 <span class="token constant">stderr</span>
+</code></pre>
+<h2 id="4-文件的打开和关闭"><a href="#4-文件的打开和关闭" class="headerlink" title="4.文件的打开和关闭"></a>4.文件的打开和关闭</h2><pre class=" language-c"><code class="language-c"> 文件的操作信息包括<span class="token punctuation">:</span> 文件的名字<span class="token punctuation">.</span>路径 操作方式
+ 操作方式常用的有 r只读 w只写 a在文件尾部追加 t打开文本文件 b打开二进制文件 <span class="token operator">+</span>
+ <span class="token operator">*</span>其中<span class="token operator">+</span>的用法<span class="token punctuation">:</span> r<span class="token operator">+</span>先读后写 w<span class="token operator">+</span>先写后读 a<span class="token operator">+</span>先追加后读取<span class="token operator">*</span>
+ 文件说明符<span class="token punctuation">:</span> 路径<span class="token punctuation">(</span>正常的\变为\\<span class="token punctuation">)</span><span class="token operator">+</span>文件的名字<span class="token punctuation">.</span>扩展名
+ <span class="token number">1</span><span class="token punctuation">.</span>打开方法<span class="token punctuation">(</span>fopen 返回值为对应文件结构体的首地址<span class="token punctuation">)</span>
+   文件结构体类型指针变量<span class="token operator">=</span><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"文件说明符"</span><span class="token punctuation">,</span><span class="token string">"操作方式"</span><span class="token punctuation">)</span>
+ <span class="token number">2</span><span class="token punctuation">.</span>关闭方法<span class="token punctuation">(</span>fclose<span class="token punctuation">)</span>
+   <span class="token function">fclose</span><span class="token punctuation">(</span>文件结构体类型指针<span class="token punctuation">)</span> 关闭成功返回值为<span class="token number">0</span> 否则为非<span class="token number">0</span>的值
+</code></pre>
+<h2 id="5-顺序读写函数-前提是使用对应指针已经打开了一个文件"><a href="#5-顺序读写函数-前提是使用对应指针已经打开了一个文件" class="headerlink" title="5.顺序读写函数(前提是使用对应指针已经打开了一个文件)"></a>5.顺序读写函数(前提是使用对应指针已经打开了一个文件)</h2><h4 id="1-读字符函数-gt-返回一个字符-并将指针后移一个字节"><a href="#1-读字符函数-gt-返回一个字符-并将指针后移一个字节" class="headerlink" title="1.读字符函数-&gt; 返回一个字符,并将指针后移一个字节"></a>1.读字符函数-&gt; 返回一个字符,并将指针后移一个字节</h4><pre class=" language-c"><code class="language-c">  用法<span class="token punctuation">:</span> 字符变量<span class="token operator">=</span><span class="token function">fgetc</span><span class="token punctuation">(</span>文件结构体类型指针<span class="token punctuation">)</span>
+      读取错误时返回标志<span class="token constant">EOF</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+      可以用<span class="token function">feof</span><span class="token punctuation">(</span><span class="token punctuation">)</span>避免识别二进制中的<span class="token operator">-</span><span class="token number">1</span>
+           用法<span class="token punctuation">:</span> 作为循环的条件 <span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>文件指针<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="2-写字符函数-gt-写成功返回字符-否则为EOF"><a href="#2-写字符函数-gt-写成功返回字符-否则为EOF" class="headerlink" title="2.写字符函数-&gt; 写成功返回字符 否则为EOF"></a>2.写字符函数-&gt; 写成功返回字符 否则为EOF</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span> <span class="token function">fputc</span><span class="token punctuation">(</span>字符<span class="token punctuation">,</span>文件指针<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="3-读字符串函数fgets"><a href="#3-读字符串函数fgets" class="headerlink" title="3.读字符串函数fgets()"></a>3.读字符串函数fgets()</h3><pre class=" language-c"><code class="language-c">   读取n<span class="token number">-1</span>个字符在字符串末尾加\<span class="token number">0</span><span class="token punctuation">,</span>每当读取的\n时结束并将指针后移<span class="token punctuation">,</span>同样多个字符单位
+   用法<span class="token punctuation">:</span> <span class="token function">fgets</span><span class="token punctuation">(</span>字符数组变量<span class="token punctuation">,</span>n<span class="token punctuation">,</span>文件指针<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="4-写字符串函数-gt-写入时不包括-0"><a href="#4-写字符串函数-gt-写入时不包括-0" class="headerlink" title="4.写字符串函数-&gt; 写入时不包括\0"></a>4.写字符串函数-&gt; 写入时不包括\0</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span> <span class="token function">fputs</span><span class="token punctuation">(</span>字符串<span class="token punctuation">,</span>文件指针<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="5-格式化读取函数"><a href="#5-格式化读取函数" class="headerlink" title="5.格式化读取函数"></a>5.格式化读取函数</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span> <span class="token function">fsacnf</span><span class="token punctuation">(</span>文件指针<span class="token punctuation">,</span>格式控制<span class="token punctuation">,</span><span class="token operator">&amp;</span>输入变量表列<span class="token punctuation">)</span>
+   字符串变量前不用加<span class="token operator">&amp;</span>
+</code></pre>
+<h4 id="6-格式化写入"><a href="#6-格式化写入" class="headerlink" title="6.格式化写入"></a>6.格式化写入</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span> <span class="token function">fprintf</span><span class="token punctuation">(</span>文件指针<span class="token punctuation">,</span>格式控制<span class="token punctuation">,</span>输出变量表列<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="7-数据块读取"><a href="#7-数据块读取" class="headerlink" title="7.数据块读取"></a>7.数据块读取</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span><span class="token function">fread</span><span class="token punctuation">(</span>新数据地址<span class="token punctuation">,</span>n<span class="token punctuation">,</span>数据项数目<span class="token punctuation">,</span>文件类型指针<span class="token punctuation">)</span>
+   作用<span class="token punctuation">:</span>读取文件指针中指定个数数据项<span class="token punctuation">,</span>每个数据项读写n个字节数<span class="token punctuation">,</span>并将数据存入新地址
+</code></pre>
+<h4 id="8-数据块写入"><a href="#8-数据块写入" class="headerlink" title="8.数据块写入"></a>8.数据块写入</h4><pre class=" language-c"><code class="language-c">   用法<span class="token punctuation">:</span><span class="token function">fwrite</span><span class="token punctuation">(</span>新数据地址<span class="token punctuation">,</span>n<span class="token punctuation">,</span>数据项数目<span class="token punctuation">,</span>文件类型指针<span class="token punctuation">)</span>
+   作用<span class="token punctuation">:</span>在文件指针中写入指定个数数据项<span class="token punctuation">,</span>每个数据项写入n个字节数<span class="token punctuation">,</span>并将数据存入新地址
+</code></pre>
+<h2 id="6-随机-定位-读写函数"><a href="#6-随机-定位-读写函数" class="headerlink" title="6.随机(定位)读写函数"></a>6.随机(定位)读写函数</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>文件读写位置指针
+<span class="token number">2</span><span class="token punctuation">.</span>位置指针重返文件头函数
+  调用格式<span class="token punctuation">:</span> <span class="token function">rewind</span><span class="token punctuation">(</span>文件类型指针<span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span>改变文件位置指针函数
+  调用格式<span class="token punctuation">:</span> <span class="token function">fseek</span><span class="token punctuation">(</span>文件类型指针<span class="token punctuation">,</span>偏移量<span class="token punctuation">,</span>起始点<span class="token punctuation">)</span>
+    起始点参数<span class="token punctuation">:</span> SEEK_SET或<span class="token number">0</span> <span class="token operator">-></span>开始位置
+              SEEK_CUR或<span class="token number">1</span> <span class="token operator">-></span>当前位置
+              SEEK_END或<span class="token number">2</span> <span class="token operator">-></span>末尾
+<span class="token number">4</span><span class="token punctuation">.</span>查询文件位置指针
+  调用格式<span class="token punctuation">:</span> <span class="token function">ftell</span><span class="token punctuation">(</span>文件类型指针<span class="token punctuation">)</span> 
+</code></pre>
+<h1 id="十五-位运算和可变数组"><a href="#十五-位运算和可变数组" class="headerlink" title="十五.位运算和可变数组"></a>十五.位运算和可变数组</h1><h2 id="1-位运算符-二进制数运算-如-01011101-位运算符-10111101"><a href="#1-位运算符-二进制数运算-如-01011101-位运算符-10111101" class="headerlink" title="1.位运算符: 二进制数运算  如 01011101 位运算符 10111101"></a>1.位运算符: 二进制数运算  如 01011101 位运算符 10111101</h2><pre class=" language-c"><code class="language-c"> 逻辑位<span class="token punctuation">:</span> <span class="token operator">&amp;</span> 与<span class="token punctuation">:</span>两位都为<span class="token number">1</span>则该位为<span class="token number">1</span><span class="token punctuation">,</span>否则为<span class="token number">0</span>
+        <span class="token operator">|</span> 或 <span class="token punctuation">:</span>两位同为<span class="token number">0</span>则该位为<span class="token number">0</span><span class="token punctuation">,</span>否则为<span class="token number">1</span>
+        <span class="token operator">^</span> 异或<span class="token punctuation">:</span>两位不同时为<span class="token number">1</span><span class="token punctuation">,</span>相同时为<span class="token number">0</span>   
+              规定<span class="token punctuation">:</span> x<span class="token operator">^</span>x<span class="token operator">=</span><span class="token number">0</span> <span class="token number">0</span><span class="token operator">^</span>x<span class="token operator">=</span>x x<span class="token operator">^</span>y<span class="token operator">^</span>y<span class="token operator">=</span>x
+        <span class="token operator">~</span> 取反<span class="token punctuation">:</span>各位的<span class="token number">0</span>变成<span class="token number">1</span>，<span class="token number">1</span>变成<span class="token number">0</span>
+</code></pre>
+<h2 id="2-定义数组结构体"><a href="#2-定义数组结构体" class="headerlink" title="2.定义数组结构体"></a>2.定义数组结构体</h2><pre class=" language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token keyword">int</span> <span class="token operator">*</span>array<span class="token punctuation">;</span><span class="token keyword">int</span> size<span class="token punctuation">;</span><span class="token punctuation">}</span>Array<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="3-对应操作函数"><a href="#3-对应操作函数" class="headerlink" title="3.对应操作函数"></a>3.对应操作函数</h2><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//创建</span>
+Array <span class="token function">arrayCreat</span><span class="token punctuation">(</span><span class="token keyword">int</span> array_size<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     Array a<span class="token punctuation">;</span>
+     a<span class="token punctuation">.</span>size<span class="token operator">=</span>array_size<span class="token punctuation">;</span>
+     a<span class="token punctuation">.</span>array<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> a<span class="token punctuation">.</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">return</span> a<span class="token punctuation">;</span>
 
-&#125;
-&#x2F;&#x2F;释放
-void arrayFree(Array *a)&#123;
-    free(a-&gt;array)
-    a-&gt;array&#x3D;NULL;
-    a-&gt;size&#x3D;0;
-&#125;
-&#x2F;&#x2F;查询
-int arraySize(Array *a)&#123;
-    return a-&gt;size;  &#x2F;&#x2F;返回其数组大小即可
-&#125;
-&#x2F;&#x2F;引用
-int arrayGet(const Array *a,int index)&#123;
-    return a-&gt;array[index];  &#x2F;&#x2F;返回其值即可
-&#125;
-&#x2F;&#x2F;修改
-void arraySet(Array *a,int index,int value)&#123;
-    a-&gt;array[index]&#x3D;value;
-&#125;
-&#x2F;&#x2F;扩大
-void arrayExpend(Array *a,int more_size)&#123;   &#x2F;&#x2F;始终实在对原数组进行操作
-    int *p&#x3D;(int*) malloc(sizeof(a-&gt;size+more_size));
-    for(int i &#x3D;0;i&lt;a-&gt;size;i++)&#123;
-        p[i]&#x3D;a-&gt;array[i];
-    &#125;
-    free(a-&gt;array);
-    a-&gt;size +&#x3D;more_size;
-    a-&gt;array&#x3D;p;
-&#125;</code></pre>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//释放</span>
+<span class="token keyword">void</span> <span class="token function">arrayFree</span><span class="token punctuation">(</span>Array <span class="token operator">*</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>a<span class="token operator">-></span>array<span class="token punctuation">)</span>
+    a<span class="token operator">-></span>array<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+    a<span class="token operator">-></span>size<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//查询</span>
+<span class="token keyword">int</span> <span class="token function">arraySize</span><span class="token punctuation">(</span>Array <span class="token operator">*</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">-></span>size<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//返回其数组大小即可</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//引用</span>
+<span class="token keyword">int</span> <span class="token function">arrayGet</span><span class="token punctuation">(</span><span class="token keyword">const</span> Array <span class="token operator">*</span>a<span class="token punctuation">,</span><span class="token keyword">int</span> index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">-></span>array<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//返回其值即可</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//修改</span>
+<span class="token keyword">void</span> <span class="token function">arraySet</span><span class="token punctuation">(</span>Array <span class="token operator">*</span>a<span class="token punctuation">,</span><span class="token keyword">int</span> index<span class="token punctuation">,</span><span class="token keyword">int</span> value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    a<span class="token operator">-></span>array<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token operator">=</span>value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//扩大</span>
+<span class="token keyword">void</span> <span class="token function">arrayExpend</span><span class="token punctuation">(</span>Array <span class="token operator">*</span>a<span class="token punctuation">,</span><span class="token keyword">int</span> more_size<span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment" spellcheck="true">//始终实在对原数组进行操作</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token operator">-></span>size<span class="token operator">+</span>more_size<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>a<span class="token operator">-></span>size<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token operator">-></span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>a<span class="token operator">-></span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    a<span class="token operator">-></span>size <span class="token operator">+</span><span class="token operator">=</span>more_size<span class="token punctuation">;</span>
+    a<span class="token operator">-></span>array<span class="token operator">=</span>p<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -1181,6 +1220,13 @@ void arrayExpend(Array *a,int more_size)&#123;   &#x2F;&#x2F;始终实在对原�
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+    <style type="text/css">
+        code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+    </style>
 
 
     </div>
@@ -1560,7 +1606,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 

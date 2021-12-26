@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="算法">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -37,7 +37,7 @@
 <body>
 
 
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
     <script type="text/javascript" src="/js/fireworks.js"></script>
 
@@ -484,64 +484,61 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="四-数学知识"><a href="#四-数学知识" class="headerlink" title="四.数学知识"></a>四.数学知识</h1><h2 id="1-质数"><a href="#1-质数" class="headerlink" title="1.质数"></a>1.质数</h2><pre class="language-c" data-language="c"><code class="language-c">1.质数定义
-    大于1且只包含1和它本身两个约数的数
-2.试除法判质数
-    (1).最暴力  O( n ) 
-     &#x2F;&#x2F;直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true
-	bool is_prime(long x)&#123;
-  	  if (x&lt;2)return false;
-  	  for (long i&#x3D;2;i&lt;x;i++)&#123;
-    	    if (x%i&#x3D;&#x3D;0)return false;
-   	  &#125;
-      return true;
-	&#125;
-    (2).利用质数的性质优化  O( sqrt(n) )
-     &#x2F;&#x2F;假设i可以整除n,那么它们的商n&#x2F;i也能整除n,假设在i与n&#x2F;i中i是较小的那个数,
-     &#x2F;&#x2F;那么n&#x2F;i&gt;&#x3D;d,则只i需要遍历到sqrt(i)即可
-	bool is_prime(long x)&#123;
- 	   if (x&lt;2)return false;
-  	   for (long i&#x3D;2;i&lt;&#x3D;x&#x2F;i;i++)&#123;
-  	      if (x%i&#x3D;&#x3D;0)return false;
- 	   &#125;
-	   return true;
-	&#125;    
-3.试除法分解质因数	O( nlog n ~ sqrt(n) )
-    原理：n中只包含一个大于sqrt(n)的质因子
-    void divide_prime(long n)&#123;
-        for(long i&#x3D;2;i&lt;&#x3D;n&#x2F;i;i++)&#123;
-            if(n%i&#x3D;&#x3D;0)&#123;&#x2F;&#x2F;n%i&#x3D;&#x3D;0成立说明n中已经没有了1 ~ i-1的因子,也保证了i中也没有了1 ~ i-1的因子
-                long s&#x3D;0;	&#x2F;&#x2F;所以i一定是n的一个质因子
-                while(n%i&#x3D;&#x3D;0)&#123;
-                    n &#x2F;&#x3D;i;&#x2F;&#x2F;除掉该质因数
-                    s++;
-                &#125;
-                cout&lt;&lt;i&lt;&lt;&#39; &#39;&lt;&lt;s&lt;&lt;endl;
-            &#125;
-        &#125;
-        if(n&gt;1)cout&lt;&lt;n&lt;&lt;&#39; &#39;&lt;&lt;1&lt;&lt;endl;&#x2F;&#x2F;n&gt;1说明剩下那个质因子是大于sqrt(n)的那个,则直接输出
-    &#125;
-4.筛质数
-    (1).朴素筛法	O( nlog(log n) )
-    	质数定理：1~n中只有n&#x2F;ln n个质数
-    	原理：任何整数的倍数都不是素数
-    long *get_prime(long n)&#123;	&#x2F;&#x2F;返回一个小于等于n的素数表的首地址
-		long primeNums[(long)n&#x2F;log n+1],count&#x3D;0;
-         bool flag[(long)n&#x2F;log n+3]&#x3D;&#123;0&#125;;
-         for(long i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
-             if(!flag[i]) primeNums[conut++]&#x3D;i;	&#x2F;&#x2F;当标记为假时才存入
-         &#125;
-         for(long j&#x3D;2*i;j&lt;&#x3D;n;j+&#x3D;i) flag[j]&#x3D;true;
-    	
-	&#125;
+                <h1 id="四-数学知识"><a href="#四-数学知识" class="headerlink" title="四.数学知识"></a>四.数学知识</h1><h2 id="1-质数"><a href="#1-质数" class="headerlink" title="1.质数"></a>1.质数</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>质数定义
+    大于<span class="token number">1</span>且只包含<span class="token number">1</span>和它本身两个约数的数
+<span class="token number">2</span><span class="token punctuation">.</span>试除法判质数
+    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>最暴力  <span class="token function">O</span><span class="token punctuation">(</span> n <span class="token punctuation">)</span> 
+     <span class="token comment" spellcheck="true">//直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true</span>
+    bool <span class="token function">is_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>x<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">return</span> false<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>利用质数的性质优化  <span class="token function">O</span><span class="token punctuation">(</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+     <span class="token comment" spellcheck="true">//假设i可以整除n,那么它们的商n/i也能整除n,假设在i与n/i中i是较小的那个数,</span>
+     <span class="token comment" spellcheck="true">//那么n/i>=d,则只i需要遍历到sqrt(i)即可</span>
+    bool <span class="token function">is_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token keyword">return</span> false<span class="token punctuation">;</span>
+         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>x<span class="token operator">/</span>i<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+       <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>    
+<span class="token number">3</span><span class="token punctuation">.</span>试除法分解质因数    <span class="token function">O</span><span class="token punctuation">(</span> nlog n <span class="token operator">~</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+    原理：n中只包含一个大于<span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>的质因子
+    <span class="token keyword">void</span> <span class="token function">divide_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">/</span>i<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//n%i==0成立说明n中已经没有了1 ~ i-1的因子,也保证了i中也没有了1 ~ i-1的因子</span>
+                <span class="token keyword">long</span> s<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//所以i一定是n的一个质因子</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    n <span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//除掉该质因数</span>
+                    s<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                cout<span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">' '</span><span class="token operator">&lt;&lt;</span>s<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">></span><span class="token number">1</span><span class="token punctuation">)</span>cout<span class="token operator">&lt;&lt;</span>n<span class="token operator">&lt;&lt;</span><span class="token string">' '</span><span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//n>1说明剩下那个质因子是大于sqrt(n)的那个,则直接输出</span>
+    <span class="token punctuation">}</span>
+<span class="token number">4</span><span class="token punctuation">.</span>筛质数
+    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>朴素筛法    <span class="token function">O</span><span class="token punctuation">(</span> <span class="token function">nlog</span><span class="token punctuation">(</span>log n<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+        质数定理：<span class="token number">1</span><span class="token operator">~</span>n中只有n<span class="token operator">/</span>ln n个质数
+        原理：任何整数的倍数都不是素数
+    <span class="token keyword">long</span> <span class="token operator">*</span><span class="token function">get_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//返回一个小于等于n的素数表的首地址</span>
+        <span class="token keyword">long</span> primeNums<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>n<span class="token operator">/</span>log n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>count<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+         bool flag<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>n<span class="token operator">/</span>log n<span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> primeNums<span class="token punctuation">[</span>conut<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//当标记为假时才存入</span>
+         <span class="token punctuation">}</span>
+         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> j<span class="token operator">=</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">+</span><span class="token operator">=</span>i<span class="token punctuation">)</span> flag<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>
+        
+    <span class="token punctuation">}</span>
     
     
     
@@ -555,7 +552,8 @@
     
     
     
-    </code></pre>
+    
+</code></pre>
 
                 
             </div>
@@ -823,6 +821,13 @@
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+    <style type="text/css">
+        code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+    </style>
 
 
     </div>
@@ -1202,7 +1207,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 
