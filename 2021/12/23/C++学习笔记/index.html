@@ -492,7 +492,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h1><h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1.小知识"></a>1.小知识</h2><pre class="language-c++" data-language="c++"><code class="language-c++">布尔类型 bool
+                <h1 id="一-基础"><a href="#一-基础" class="headerlink" title="一.基础"></a>一.基础</h1><h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1.小知识"></a>1.小知识</h2><pre class="language-c" data-language="c"><code class="language-c">布尔类型 bool
 goto  标记名:
 标记方法：直接在要跳转的位置写    标记名:
 野指针：指指向非法内存空间的指针
@@ -507,7 +507,7 @@ coust在\*号后修饰的指针,其指向不可变,但其指向的值可变---�
 数组长度的获取方法： sizeof(数组名)&#x2F;sizeof(数组名[0])        </code></pre>
 
 <h2 id="2-多文件管理"><a href="#2-多文件管理" class="headerlink" title="2.多文件管理"></a>2.多文件管理</h2><p>头文件中写函数声明<br>源文件中写函数定义</p>
-<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><pre class="language-c++" data-language="c++"><code class="language-c++">作用：给变量起别名(即通过内存控制变量)
+<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><pre class="language-c" data-language="c"><code class="language-c">作用：给变量起别名(即通过内存控制变量)
 用法：类型 &amp;别名&#x3D;原名;
 	使用别名和原名效果是一样的(不需要C语言中的间接访问运算符\*)
 注意事项：引用必须要初始化且在初始化后就不可改变
@@ -519,7 +519,7 @@ coust在\*号后修饰的指针,其指向不可变,但其指向的值可变---�
 可以用const修饰引用使其变为[常量引用]，引用的对象不可变，可以用于修饰形参</code></pre>
 
 
-<h2 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4.输入输出"></a>4.输入输出</h2><pre class="language-c++" data-language="c++"><code class="language-c++">相关操作符使用之前都需要加上std::   可以使用using namespace std来省略std::的使用
+<h2 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4.输入输出"></a>4.输入输出</h2><pre class="language-c" data-language="c"><code class="language-c">相关操作符使用之前都需要加上std::   可以使用using namespace std来省略std::的使用
 流：将数据从一个对象到另一个对象的流动抽象为流
 cin处理标准键盘输入 cout处理标准屏幕输出
 		&lt;&lt; 为插入符(向屏幕插入)			&gt;&gt;为提取符(从键盘上提取)
@@ -537,7 +537,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 	setfill(int ch)设置填充字符为ch</code></pre>
 
 
-<h2 id="5-函数的特殊用法"><a href="#5-函数的特殊用法" class="headerlink" title="5.函数的特殊用法"></a>5.函数的特殊用法</h2><pre class="language-c++" data-language="c++"><code class="language-c++">1.函数形参可以设置默认值：
+<h2 id="5-函数的特殊用法"><a href="#5-函数的特殊用法" class="headerlink" title="5.函数的特殊用法"></a>5.函数的特殊用法</h2><pre class="language-c" data-language="c"><code class="language-c">1.函数形参可以设置默认值：
 	用法：int add(int a,int b&#x3D;20,int c&#x3D;30)&#123;&#125;
  	作用：在没有实参传入函数时，则形参使用默认值
     注意事项：若函数形参某一位置有默认值，则其后面所有的形参都必须有默认值
@@ -550,8 +550,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
     条件：函数在同一个作用域，其形参个数、类型或顺序不同，函数名相同
     注意事项：引用类型作为函数形参时，加不加const时两个不同的类型
         	 函数设置默认值时其效果不能相同</code></pre>
-<h1 id="二-面向对象"><a href="#二-面向对象" class="headerlink" title="二.面向对象"></a>二.面向对象</h1><p>1.内存模型</p>
-<pre class="language-c++" data-language="c++"><code class="language-c++">分类:
+<h1 id="二-面向对象"><a href="#二-面向对象" class="headerlink" title="二.面向对象"></a>二.面向对象</h1><h2 id="1-内存模型"><a href="#1-内存模型" class="headerlink" title="1.内存模型"></a>1.内存模型</h2><pre class="language-c" data-language="c"><code class="language-c">分类:
 	代码区：存放函数体
 		特点：共享但只读
 	全局区 ：存放全局变量和静态变量以及常量
@@ -559,14 +558,15 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 		注意：不要返回局部变量的地址
 	堆区：由程序分配和释放</code></pre>
 
-<p>2.new和delete操作符</p>
-<pre class="language-c++" data-language="c++"><code class="language-c++">在堆区开辟空间
+<h2 id="2-new和delete操作符"><a href="#2-new和delete操作符" class="headerlink" title="2.new和delete操作符"></a>2.new和delete操作符</h2><pre class="language-c" data-language="c"><code class="language-c">在堆区开辟空间
 	用法：new 类型;		或	new 类型(值);   
 	结果：返回开辟空间的地址	(可保存在指针或引用中,并可以间接访问其 值)
 在堆区释放空间
 	用法：delete 变量名</code></pre>
-<p>4.面向对象的核心思想<br>        以类的方式组织代码，以对象的形式封装数据<br>        对象包括 属性 和 行为，属性和行为一一对应并加以权限控制<br>3.封装</p>
-<pre class="language-c++" data-language="c++"><code class="language-c++">1.通过类来进行封装：	
+<h2 id="4-面向对象的核心思想"><a href="#4-面向对象的核心思想" class="headerlink" title="4.面向对象的核心思想"></a>4.面向对象的核心思想</h2><pre><code>    以类的方式组织代码，以对象的形式封装数据
+    对象包括 属性 和 行为，属性和行为一一对应并加以权限控制
+</code></pre>
+<h2 id="3-封装"><a href="#3-封装" class="headerlink" title="3.封装"></a>3.封装</h2><pre class="language-c" data-language="c"><code class="language-c">1.通过类来进行封装：	
 	作用：在设计类时可以使 属性和行为 绑定在一起，行为即是函数也叫方法
 	用法：class 类名&#123;	
     	  访问权限: 
@@ -589,7 +589,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 
 
 </code></pre>
-<h1 id="三-C-STL"><a href="#三-C-STL" class="headerlink" title="三.C++ STL"></a>三.C++ STL</h1><h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1.相关概念"></a>1.相关概念</h2><pre class="language-c++" data-language="c++"><code class="language-c++">1.STL概念
+<h1 id="三-C-STL"><a href="#三-C-STL" class="headerlink" title="三.C++ STL"></a>三.C++ STL</h1><h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1.相关概念"></a>1.相关概念</h2><pre class="language-c" data-language="c"><code class="language-c">1.STL概念
     (1).STL含义：标准模板库
     (2).广义上的分类：容器(container)  算法(头文件名：algorithm)  迭代器(头文件名：iterator)
     (3).容器和算法之间通过迭代器无缝连接
@@ -608,7 +608,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 5.迭代器
     作用类似于指针
     每一种容器都有一类迭代器</code></pre>
-<h2 id="1-String容器"><a href="#1-String容器" class="headerlink" title="1.String容器"></a>1.String容器</h2><pre class="language-c++" data-language="c++"><code class="language-c++">头文件为 &lt;string&gt;
+<h2 id="1-String容器"><a href="#1-String容器" class="headerlink" title="1.String容器"></a>1.String容器</h2><pre class="language-c" data-language="c"><code class="language-c">头文件为 &lt;string&gt;
 (1).构造
     string s ---默认构造，为空
     string s1(&quot;chenfeng&quot;);
@@ -654,7 +654,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
 	str.substr(pos,n);			-返回从下标pos开始的长度为n的子串(包括下标pos处)            
 (10).取长 取头 取尾 判空 
 	str.length();	str.begin();	str.end();    str.empty();</code></pre>
-<h1 id="四-C-标准库函数"><a href="#四-C-标准库函数" class="headerlink" title="四.C++标准库函数"></a>四.C++标准库函数</h1><pre class="language-c++" data-language="c++"><code class="language-c++">1.万能库：&lt;bits&#x2F;stdc++.h&gt;
+<h1 id="四-C-标准库函数"><a href="#四-C-标准库函数" class="headerlink" title="四.C++标准库函数"></a>四.C++标准库函数</h1><pre class="language-c" data-language="c"><code class="language-c">1.万能库：&lt;bits&#x2F;stdc++.h&gt;
 2.包含c语言函数库的写法：将.h省略并在库名前加上c
 3.IO流控制：&lt;iostream&gt; &lt;iomanip&gt;
 4.数学库：&lt;cmath&gt;
@@ -671,7 +671,7 @@ cin处理标准键盘输入 cout处理标准屏幕输出
             
             
            </code></pre>
-<h1 id="五-C语言标准库函数"><a href="#五-C语言标准库函数" class="headerlink" title="五.C语言标准库函数"></a>五.C语言标准库函数</h1><pre class="language-c++" data-language="c++"><code class="language-c++">1.&lt;stdio.h&gt;
+<h1 id="五-C语言标准库函数"><a href="#五-C语言标准库函数" class="headerlink" title="五.C语言标准库函数"></a>五.C语言标准库函数</h1><pre class="language-c" data-language="c"><code class="language-c">1.&lt;stdio.h&gt;
 2.动态内存控制：&lt;stdlib.h&gt;
 3.数学库：&lt;math.h&gt;
 4.字符串处理库：&lt;string.h&gt;
@@ -810,6 +810,55 @@ cin处理标准键盘输入 cout处理标准屏幕输出
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2021/12/26/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="算法学习">
+                        
+                        <span class="card-title">算法学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基本的算法学习
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/study/" class="post-category">
+                                    study
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/12/23/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
@@ -826,9 +875,9 @@ cin处理标准键盘输入 cout处理标准屏幕输出
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -846,55 +895,6 @@ cin处理标准键盘输入 cout处理标准屏幕输出
                     
                     <a href="/tags/c/">
                         <span class="chip bg-color">c</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/19/Hexo-Matery%E6%90%AD%E5%BB%BA/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo搭建">
-                        
-                        <span class="card-title">Hexo搭建</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Hexo框架博客搭建基础教程
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/kill/" class="post-category">
-                                    kill
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>

@@ -492,7 +492,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一-搭建hexo博客"><a href="#一-搭建hexo博客" class="headerlink" title="一.搭建hexo博客"></a>一.搭建hexo博客</h1><h2 id="1-git指令"><a href="#1-git指令" class="headerlink" title="1.git指令"></a>1.git指令</h2><pre class="language-c++" data-language="c++"><code class="language-c++">在指令前加sudo是最高权限
+                <h1 id="一-搭建hexo博客"><a href="#一-搭建hexo博客" class="headerlink" title="一.搭建hexo博客"></a>一.搭建hexo博客</h1><h2 id="1-git指令"><a href="#1-git指令" class="headerlink" title="1.git指令"></a>1.git指令</h2><pre class="language-c" data-language="c"><code class="language-c">在指令前加sudo是最高权限
 hexo clean清除缓存hexo g重新加载
 hexo init初始化
 hexo s静态生成本地网页
@@ -509,7 +509,7 @@ npm run 自定义指令字符串
 	自定义指令在&#x2F;hexoblog&#x2F;package.json文件的scripts后修改
 		格式为 &quot;自定义字符串&quot;: “hexo指令(多个指令用&amp;&amp;连接)”         </code></pre>
 
-<h2 id="2-利用install-sh搭建hexo-script步骤"><a href="#2-利用install-sh搭建hexo-script步骤" class="headerlink" title="2.利用install.sh搭建hexo script步骤"></a>2.利用install.sh搭建hexo script步骤</h2><pre class="language-c++" data-language="c++"><code class="language-c++">前提：
+<h2 id="2-利用install-sh搭建hexo-script步骤"><a href="#2-利用install-sh搭建hexo-script步骤" class="headerlink" title="2.利用install.sh搭建hexo script步骤"></a>2.利用install.sh搭建hexo script步骤</h2><pre class="language-c" data-language="c"><code class="language-c">前提：
 	安装好nodejs和git
 在Blog文件夹内git
 	运行：
@@ -529,7 +529,7 @@ npm run 自定义指令字符串
 		npm install -S hexo-prism-plugin
 		npm install hexo-cli -g
 		运行source up.sh</code></pre>
-<h2 id="3-git配置SSH-key"><a href="#3-git配置SSH-key" class="headerlink" title="3.git配置SSH key"></a>3.git配置SSH key</h2><pre class="language-c++" data-language="c++"><code class="language-c++">1.先看本地是否配置好SSH key（命令：cd ~&#x2F;.ssh）
+<h2 id="3-git配置SSH-key"><a href="#3-git配置SSH-key" class="headerlink" title="3.git配置SSH key"></a>3.git配置SSH key</h2><pre class="language-c" data-language="c"><code class="language-c">1.先看本地是否配置好SSH key（命令：cd ~&#x2F;.ssh）
   ssh配置好之后是保存到 c:&#x2F;用户&#x2F;Administrator&#x2F;.ssh
   若不能找到该文件夹则说明没配置
 2.先生成ssh key
@@ -545,21 +545,21 @@ npm run 自定义指令字符串
 4.配置账号和密码:
   $ git config --global user.name &quot; &quot; 	#github用户名
   $ git config --global user.email &quot; &quot; 	#填写github注册邮箱</code></pre>
-<h2 id="4-新建github仓库"><a href="#4-新建github仓库" class="headerlink" title="4.新建github仓库"></a>4.新建github仓库</h2><pre class="language-c++" data-language="c++"><code class="language-c++">仓库名设置为
+<h2 id="4-新建github仓库"><a href="#4-新建github仓库" class="headerlink" title="4.新建github仓库"></a>4.新建github仓库</h2><pre class="language-c" data-language="c"><code class="language-c">仓库名设置为
 用户名.github.io.git
 然后更改\hexoblog\_config.yml文件中的设置
 	deploy:
   		type: git
   		repository: https:&#x2F;&#x2F;github.com&#x2F;用户名&#x2F;用户名.github.io.git
   		branch: main</code></pre>
-<h2 id="5-安装图床并更换主题"><a href="#5-安装图床并更换主题" class="headerlink" title="5.安装图床并更换主题"></a>5.安装图床并更换主题</h2><pre class="language-c++" data-language="c++"><code class="language-c++">图床作用：保存博客里的图片到云端，使得写博客时插入的图片链接有效
+<h2 id="5-安装图床并更换主题"><a href="#5-安装图床并更换主题" class="headerlink" title="5.安装图床并更换主题"></a>5.安装图床并更换主题</h2><pre class="language-c" data-language="c"><code class="language-c">图床作用：保存博客里的图片到云端，使得写博客时插入的图片链接有效
 下载安装picgo并配置图床设置
 	1.在github&#x2F;settings&#x2F;Devloper settings新建token并勾选repo
 	2.写入配置
 	3.在picgo里面上传博客需要用到的图片文件即可 然后复制链接在博客文章里使用</code></pre>
-<h2 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6.更换主题"></a>6.更换主题</h2><pre class="language-c++" data-language="c++"><code class="language-c++">将主题文件夹放入\hexoblog\themes文件夹中，并更改\hexoblog\_config.yml文件中的以下设置
+<h2 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6.更换主题"></a>6.更换主题</h2><pre class="language-c" data-language="c"><code class="language-c">将主题文件夹放入\hexoblog\themes文件夹中，并更改\hexoblog\_config.yml文件中的以下设置
       theme: 主题文件夹名</code></pre>
-<h1 id="二-Hexo全局配置"><a href="#二-Hexo全局配置" class="headerlink" title="二.Hexo全局配置"></a>二.Hexo全局配置</h1><pre class="language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;在hexoblog根目录中的\_config.yml修改
+<h1 id="二-Hexo全局配置"><a href="#二-Hexo全局配置" class="headerlink" title="二.Hexo全局配置"></a>二.Hexo全局配置</h1><pre class="language-c" data-language="c"><code class="language-c">&#x2F;&#x2F;在hexoblog根目录中的\_config.yml修改
 1.基本信息
 title: ChenfengDream 	#网页标签名
 data: 2021-12-17	 #存在开始日期
@@ -577,7 +577,7 @@ avatar: &#x2F;public&#x2F;medias&#x2F;favicon.ico 		#网站图标
 password:    	#设置密码
 ----------------------------------------------------------------------------</code></pre>
 <h1 id="三-博客配置"><a href="#三-博客配置" class="headerlink" title="三.博客配置"></a>三.博客配置</h1><h2 id="1-生成博客"><a href="#1-生成博客" class="headerlink" title="1.生成博客"></a>1.生成博客</h2><p>在hexoblog中git输入hexo new “文章标题”    生成博客文件<br>模板信息保存在 \hexo\scaffolds\post.md 可以修改每次生成的博客的模板<br>模板位于在文章文件的顶部，修改模板和内容即可</p>
-<h2 id="2-博客模板"><a href="#2-博客模板" class="headerlink" title="2.博客模板"></a>2.博客模板</h2><pre class="language-c++" data-language="c++"><code class="language-c++">---
+<h2 id="2-博客模板"><a href="#2-博客模板" class="headerlink" title="2.博客模板"></a>2.博客模板</h2><pre class="language-c" data-language="c"><code class="language-c">---
 title: &#123;&#123; title &#125;&#125;
 date: &#123;&#123; date &#125;&#125;
 author: 乄尘封			   #作者
@@ -595,10 +595,10 @@ mathjax: false			#数学公式模块
 password:				#访问密码
 ---
 (首尾用---包括,位于博客文件的顶端)</code></pre>
-<h2 id="3-博客页美化"><a href="#3-博客页美化" class="headerlink" title="3.博客页美化"></a>3.博客页美化</h2><p>1.将所有的代码块都选c++语言</p>
+<h2 id="3-博客页美化"><a href="#3-博客页美化" class="headerlink" title="3.博客页美化"></a>3.博客页美化</h2><p>1.将所有的代码块都选c语言</p>
 <h1 id="四-Matery主题个性化修改"><a href="#四-Matery主题个性化修改" class="headerlink" title="四.Matery主题个性化修改"></a>四.Matery主题个性化修改</h1><p>//都是在主题文件夹中进行修改</p>
-<h2 id="1-主页的遮幕"><a href="#1-主页的遮幕" class="headerlink" title="1.主页的遮幕"></a>1.主页的遮幕</h2><pre class="language-c++" data-language="c++"><code class="language-c++">在matery.css中的rainbow相关的全部注释掉即可关闭</code></pre>
-<h2 id="2-修改主页横幅标题的字体："><a href="#2-修改主页横幅标题的字体：" class="headerlink" title="2.修改主页横幅标题的字体："></a>2.修改主页横幅标题的字体：</h2><pre class="language-c++" data-language="c++"><code class="language-c++">将字体文件放入到&#x2F;hexoflag&#x2F;source&#x2F;font文件夹中 	
+<h2 id="1-主页的遮幕"><a href="#1-主页的遮幕" class="headerlink" title="1.主页的遮幕"></a>1.主页的遮幕</h2><pre class="language-c" data-language="c"><code class="language-c">在matery.css中的rainbow相关的全部注释掉即可关闭</code></pre>
+<h2 id="2-修改主页横幅标题的字体："><a href="#2-修改主页横幅标题的字体：" class="headerlink" title="2.修改主页横幅标题的字体："></a>2.修改主页横幅标题的字体：</h2><pre class="language-c" data-language="c"><code class="language-c">将字体文件放入到&#x2F;hexoflag&#x2F;source&#x2F;font文件夹中 	
 (没有font就新建,字体文件可以在方正字库中下载)
 然后在主题中的&#x2F;css&#x2F;my.css中设置添加一下代码
 	@font-face&#123;
@@ -613,10 +613,10 @@ password:				#访问密码
 	 class&#x3D;&quot;description center-align diyFont&quot;即可
 主标题文字在全局配置中 subtitle:
 副标题文字在主题全局配置中 subtitle:</code></pre>
-<h2 id="3-主页上横幅的第二个按钮修改"><a href="#3-主页上横幅的第二个按钮修改" class="headerlink" title="3.主页上横幅的第二个按钮修改"></a>3.主页上横幅的第二个按钮修改</h2><pre class="language-c++" data-language="c++"><code class="language-c++">indexbtn:	
+<h2 id="3-主页上横幅的第二个按钮修改"><a href="#3-主页上横幅的第二个按钮修改" class="headerlink" title="3.主页上横幅的第二个按钮修改"></a>3.主页上横幅的第二个按钮修改</h2><pre class="language-c" data-language="c"><code class="language-c">indexbtn:	
 可设置是否开启，名字，链接</code></pre>
 <h2 id="4-主题全局配置"><a href="#4-主题全局配置" class="headerlink" title="4.主题全局配置"></a>4.主题全局配置</h2><p>在主题的全局配置文件_config.yml中修改(enable设置值为 false/true)</p>
-<h3 id="1-图片相关"><a href="#1-图片相关" class="headerlink" title="(1).图片相关"></a>(1).图片相关</h3><pre class="language-c++" data-language="c++"><code class="language-c++">1.关于中我的相册
+<h3 id="1-图片相关"><a href="#1-图片相关" class="headerlink" title="(1).图片相关"></a>(1).图片相关</h3><pre class="language-c" data-language="c"><code class="language-c">1.关于中我的相册
 	myGallery: 
 	  enable: true&#x2F;false
 	  data: 
@@ -641,12 +641,12 @@ password:				#访问密码
 	背景图轮换方式:在layout&#x2F;_partial&#x2F;bg-cover-content.ejs中最下面new Date().getDay() 
 	#关闭后默认为编号0的图片
   图片位置在:themes&#x2F;matery-master&#x2F;source&#x2F;medias&#x2F;banner中 图片名均设置为编号</code></pre>
-<h3 id="2-效果设置"><a href="#2-效果设置" class="headerlink" title="(2).效果设置"></a>(2).效果设置</h3><pre class="language-c++" data-language="c++"><code class="language-c++">点击爱心 clicklove:
+<h3 id="2-效果设置"><a href="#2-效果设置" class="headerlink" title="(2).效果设置"></a>(2).效果设置</h3><pre class="language-c" data-language="c"><code class="language-c">点击爱心 clicklove:
 点击爆炸 fireworks:</code></pre>
-<h3 id="3-信息设置"><a href="#3-信息设置" class="headerlink" title="(3).信息设置"></a>(3).信息设置</h3><pre class="language-c++" data-language="c++"><code class="language-c++">网页标签名 title:	
+<h3 id="3-信息设置"><a href="#3-信息设置" class="headerlink" title="(3).信息设置"></a>(3).信息设置</h3><pre class="language-c" data-language="c"><code class="language-c">网页标签名 title:	
 关于中的个人简介 profile:	
 我的梦想 dream:	</code></pre>
-<h2 id="5-导航页"><a href="#5-导航页" class="headerlink" title="5.导航页"></a>5.导航页</h2><pre class="language-c++" data-language="c++"><code class="language-c++">导航栏:关于 分类 友情链接 标签
+<h2 id="5-导航页"><a href="#5-导航页" class="headerlink" title="5.导航页"></a>5.导航页</h2><pre class="language-c" data-language="c"><code class="language-c">导航栏:关于 分类 友情链接 标签
 都是在hexoblog&#x2F;source中建对应文件  about categories friend tags
 然后在各个文件夹类创建index.md进行编辑,添加以下代码
 	---
@@ -656,9 +656,9 @@ password:				#访问密码
 	layout: &quot;about&quot;
 	---
 导航栏颜色修改：在主题中&#x2F;source&#x2F;css&#x2F;matery.css中.bg-color修改</code></pre>
-<h2 id="6-主页上部的社交连接在"><a href="#6-主页上部的社交连接在" class="headerlink" title="6.主页上部的社交连接在"></a>6.主页上部的社交连接在</h2><pre class="language-c++" data-language="c++"><code class="language-c++">Blog\hexoblog\themes\matery-master\layout\_partial中的socil-link.ejs中有模式
+<h2 id="6-主页上部的社交连接在"><a href="#6-主页上部的社交连接在" class="headerlink" title="6.主页上部的社交连接在"></a>6.主页上部的社交连接在</h2><pre class="language-c" data-language="c"><code class="language-c">Blog\hexoblog\themes\matery-master\layout\_partial中的socil-link.ejs中有模式
 主题全局配置文件\_config.yml中的socilLink中更改链接</code></pre>
-<h2 id="7-主页底部的内容在"><a href="#7-主页底部的内容在" class="headerlink" title="7.主页底部的内容在"></a>7.主页底部的内容在</h2><pre class="language-c++" data-language="c++"><code class="language-c++">Blog\hexoblog\themes\matery-master\layout\_partial中的footer.ejs中修改</code></pre>
+<h2 id="7-主页底部的内容在"><a href="#7-主页底部的内容在" class="headerlink" title="7.主页底部的内容在"></a>7.主页底部的内容在</h2><pre class="language-c" data-language="c"><code class="language-c">Blog\hexoblog\themes\matery-master\layout\_partial中的footer.ejs中修改</code></pre>
 
 
 
@@ -883,19 +883,19 @@ password:				#访问密码
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/23/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/12/23/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C++学习笔记">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="C语言学习笔记">
                         
-                        <span class="card-title">C++学习笔记</span>
+                        <span class="card-title">C语言学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++学习日常
+                            C语言学习日常
                         
                     </div>
                     <div class="publish-info">
@@ -918,7 +918,7 @@ password:				#访问密码
                 <div class="card-action article-tags">
                     
                     <a href="/tags/c/">
-                        <span class="chip bg-color">c++</span>
+                        <span class="chip bg-color">c</span>
                     </a>
                     
                 </div>
