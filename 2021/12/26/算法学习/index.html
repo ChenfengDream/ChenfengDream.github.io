@@ -484,61 +484,64 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="四-数学知识"><a href="#四-数学知识" class="headerlink" title="四.数学知识"></a>四.数学知识</h1><h2 id="1-质数"><a href="#1-质数" class="headerlink" title="1.质数"></a>1.质数</h2><pre class=" language-c++"><code class="language-c++">1.质数定义
+                <h1 id="四-数学知识"><a href="#四-数学知识" class="headerlink" title="四.数学知识"></a>四.数学知识</h1><h2 id="1-质数"><a href="#1-质数" class="headerlink" title="1.质数"></a>1.质数</h2><pre class="language-c++" data-language="c++"><code class="language-c++">1.质数定义
     大于1且只包含1和它本身两个约数的数
 2.试除法判质数
     (1).最暴力  O( n ) 
-     //直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true
-    bool is_prime(long x)&#123;
-        if (x<2)return false;
-        for (long i=2;i<x;i++)&#123;
-            if (x%i==0)return false;
-         &#125;
+     &#x2F;&#x2F;直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true
+	bool is_prime(long x)&#123;
+  	  if (x&lt;2)return false;
+  	  for (long i&#x3D;2;i&lt;x;i++)&#123;
+    	    if (x%i&#x3D;&#x3D;0)return false;
+   	  &#125;
       return true;
-    &#125;
+	&#125;&#x2F;&#x2F;
     (2).利用质数的性质优化  O( sqrt(n) )
-     //假设i可以整除n,那么它们的商n/i也能整除n,假设在i与n/i中i是较小的那个数,
-     //那么n/i>=d,则只i需要遍历到sqrt(i)即可
-    bool is_prime(long x)&#123;
-        if (x<2)return false;
-         for (long i=2;i<=x/i;i++)&#123;
-            if (x%i==0)return false;
-        &#125;
-       return true;
-    &#125;    
-3.试除法分解质因数    O( nlog n ~ sqrt(n) )
+     &#x2F;&#x2F;假设i可以整除n,那么它们的商n&#x2F;i也能整除n,假设在i与n&#x2F;i中i是较小的那个数,
+     &#x2F;&#x2F;那么n&#x2F;i&gt;&#x3D;d,则只i需要遍历到sqrt(i)即可
+	bool is_prime(long x)&#123;
+ 	   if (x&lt;2)return false;
+  	   for (long i&#x3D;2;i&lt;&#x3D;x&#x2F;i;i++)&#123;
+  	      if (x%i&#x3D;&#x3D;0)return false;
+ 	   &#125;
+	   return true;
+	&#125;    
+3.试除法分解质因数	O( nlog n ~ sqrt(n) )
     原理：n中只包含一个大于sqrt(n)的质因子
     void divide_prime(long n)&#123;
-        for(long i=2;i<=n/i;i++)&#123;
-            if(n%i==0)&#123;//n%i==0成立说明n中已经没有了1 ~ i-1的因子,也保证了i中也没有了1 ~ i-1的因子
-                long s=0;    //所以i一定是n的一个质因子
-                while(n%i==0)&#123;
-                    n /=i;//除掉该质因数
+        for(long i&#x3D;2;i&lt;&#x3D;n&#x2F;i;i++)&#123;
+            if(n%i&#x3D;&#x3D;0)&#123;&#x2F;&#x2F;n%i&#x3D;&#x3D;0成立说明n中已经没有了1 ~ i-1的因子,也保证了i中也没有了1 ~ i-1的因子
+                long s&#x3D;0;	&#x2F;&#x2F;所以i一定是n的一个质因子
+                while(n%i&#x3D;&#x3D;0)&#123;
+                    n &#x2F;&#x3D;i;&#x2F;&#x2F;除掉该质因数
                     s++;
                 &#125;
-                cout<<i<<' '<<s<<endl;
+                cout&lt;&lt;i&lt;&lt;&#39; &#39;&lt;&lt;s&lt;&lt;endl;
             &#125;
         &#125;
-        if(n>1)cout<<n<<' '<<1<<endl;//n>1说明剩下那个质因子是大于sqrt(n)的那个,则直接输出
+        if(n&gt;1)cout&lt;&lt;n&lt;&lt;&#39; &#39;&lt;&lt;1&lt;&lt;endl;&#x2F;&#x2F;n&gt;1说明剩下那个质因子是大于sqrt(n)的那个,则直接输出
     &#125;
 4.筛质数
-    (1).朴素筛法    O( nlog(log n) )
-        质数定理：1~n中只有n/ln n个质数
-        原理：任何整数的倍数都不是素数
-    long *get_prime(long n)&#123;    //返回一个小于等于n的素数表的首地址
-        long primeNums[(long)n/log n+1],count=0;
-         bool flag[(long)n/log n+3]=&#123;0&#125;;
-         for(long i=2;i<=n;i++)&#123;
-             if(!flag[i]) primeNums[conut++]=i;    //当标记为假时才存入
+    (1).朴素筛法	O( nlog(log n) )
+    	质数定理：1~n中只有n&#x2F;ln n个质数
+    	原理：任何整数的倍数都不是素数
+    long *get_prime(long n)&#123;	&#x2F;&#x2F;返回一个小于等于n的素数表的首地址
+		long primeNums[(long)n&#x2F;log n+1],count&#x3D;0;
+         bool flag[(long)n&#x2F;log n+3]&#x3D;&#123;0&#125;;
+         for(long i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
+             if(!flag[i]) primeNums[conut++]&#x3D;i;	&#x2F;&#x2F;当标记为假时才存入
          &#125;
-         for(long j=2*i;j<=n;j+=i) flag[j]=true;
-        
-    &#125;
+         for(long j&#x3D;2*i;j&lt;&#x3D;n;j+&#x3D;i) flag[j]&#x3D;true;
+    	
+	&#125;
     
     
     
@@ -552,8 +555,7 @@
     
     
     
-    
-</code></pre>
+    </code></pre>
 
                 
             </div>
