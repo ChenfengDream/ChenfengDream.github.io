@@ -501,7 +501,10 @@ coust在\<span class="token operator">*</span>号后修饰的指针<span class="
     当对期中一个赋值后会改变其后面的值但不会改变前面的值 
 快速排序<span class="token punctuation">:</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>函数用法<span class="token punctuation">:</span>
     <span class="token function">sort</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span>last<span class="token punctuation">)</span><span class="token punctuation">;</span>  对一个数组从first开始道last结束进行排序
-数组长度的获取方法： <span class="token keyword">sizeof</span><span class="token punctuation">(</span>数组名<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>数组名<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>        
+数组长度的获取方法： <span class="token keyword">sizeof</span><span class="token punctuation">(</span>数组名<span class="token punctuation">)</span><span class="token operator">/</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>数组名<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span>遍历数组
+   <span class="token keyword">for</span><span class="token punctuation">(</span>对应类型 t<span class="token punctuation">:</span>数组<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//变量t将遍历数组中每一</span>
+       
 </code></pre>
 <h2 id="2-多文件管理"><a href="#2-多文件管理" class="headerlink" title="2.多文件管理"></a>2.多文件管理</h2><p>头文件中写函数声明<br>源文件中写函数定义</p>
 <h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><pre class=" language-c"><code class="language-c">作用：给变量起别名<span class="token punctuation">(</span>即通过内存控制变量<span class="token punctuation">)</span>
@@ -604,11 +607,13 @@ cin处理标准键盘输入 cout处理标准屏幕输出
          非质变算法<span class="token operator">-</span>不改变元素内容
 <span class="token number">5</span><span class="token punctuation">.</span>迭代器
     作用类似于指针
-    每一种容器都有一类迭代器
+    每一种容器都有一套迭代器
 </code></pre>
-<h2 id="1-String容器"><a href="#1-String容器" class="headerlink" title="1.String容器"></a>1.String容器</h2><pre class=" language-c"><code class="language-c">头文件为 <span class="token operator">&lt;</span>string<span class="token operator">></span>
+<h2 id="2-String容器"><a href="#2-String容器" class="headerlink" title="2.String容器"></a>2.String容器</h2><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//头文件为 &lt;string></span>
+<span class="token comment" spellcheck="true">//可以用变址运算符 [下标] 来获取单字符</span>
 <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>构造
     string s <span class="token operator">--</span><span class="token operator">-</span>默认构造，为空
+       <span class="token comment" spellcheck="true">//构造的同时进行了初始化    </span>
     string <span class="token function">s1</span><span class="token punctuation">(</span><span class="token string">"chenfeng"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     string <span class="token function">s2</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
     string <span class="token function">s3</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -650,8 +655,36 @@ cin处理标准键盘输入 cout处理标准屏幕输出
     删除：str<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token operator">-</span>从下标pos开始删除n个字符<span class="token punctuation">(</span>包括下标pos处<span class="token punctuation">)</span>
 <span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>子串获取
     str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token operator">-</span>返回从下标pos开始的长度为n的子串<span class="token punctuation">(</span>包括下标pos处<span class="token punctuation">)</span>            
-<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>取长 取头 取尾 判空 
-    str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>取长 取头 去尾 取尾的下一个位置 判空 
+    str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    str<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="3-Vector容器"><a href="#3-Vector容器" class="headerlink" title="3.Vector容器"></a>3.Vector容器</h2><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//头文件&lt;vector></span>
+特点：动态分配<span class="token punctuation">,</span>可变长度的单端数组<span class="token punctuation">,</span>只能在末端插入<span class="token punctuation">,</span>支持随机访问迭代器
+动态扩展的原理：寻找更大的新空间，将原有数据和新的数据按先后循序拷贝到新的空间，释放原有的空间
+ 
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>构造
+    vector<span class="token operator">&lt;</span>类型<span class="token operator">></span> v<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//构造的同时进行了初始化</span>
+    vector<span class="token operator">&lt;</span>类型<span class="token operator">></span><span class="token function">v1</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>v<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//将v1中的全部元素存入,vector(v1.begin(),v1.end())整体本身就是一个容器</span>
+    vector<span class="token operator">&lt;</span>类型<span class="token operator">></span><span class="token function">v2</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>对应类型元素<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//存n个相同的元素</span>
+    vector<span class="token operator">&lt;</span>类型<span class="token operator">></span><span class="token function">v3</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//将v2拷贝给v3</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>赋值
+    <span class="token number">1</span><span class="token punctuation">.</span>用<span class="token operator">=</span>号赋值
+        v1<span class="token operator">=</span>v2<span class="token punctuation">;</span>
+    <span class="token number">2</span><span class="token punctuation">.</span>用成员函数赋值
+        v<span class="token punctuation">.</span><span class="token function">assing</span><span class="token punctuation">(</span>v1<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>v1<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        v<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>elsm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 <h1 id="四-C-标准库函数"><a href="#四-C-标准库函数" class="headerlink" title="四.C++标准库函数"></a>四.C++标准库函数</h1><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>万能库：<span class="token operator">&lt;</span>bits<span class="token operator">/</span>stdc<span class="token operator">++</span><span class="token punctuation">.</span>h<span class="token operator">></span>
 <span class="token number">2</span><span class="token punctuation">.</span>包含c语言函数库的写法：将<span class="token punctuation">.</span>h省略并在库名前加上c
