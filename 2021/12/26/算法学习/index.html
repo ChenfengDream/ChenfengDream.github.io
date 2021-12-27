@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -314,6 +314,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -489,10 +502,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h1><h2 id="1-排序"><a href="#1-排序" class="headerlink" title="1.排序"></a>1.排序</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>基础排序 <span class="token function">O</span><span class="token punctuation">(</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span>型排序<span class="token punctuation">(</span>略<span class="token punctuation">)</span>
+                <h1 id="一-基本算法"><a href="#一-基本算法" class="headerlink" title="一.基本算法"></a>一.基本算法</h1><h2 id="1-排序"><a href="#1-排序" class="headerlink" title="1.排序"></a>1.排序</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>基础排序 <span class="token function">O</span><span class="token punctuation">(</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span>型排序<span class="token punctuation">(</span>略<span class="token punctuation">)</span>
     冒泡 插入 选择
 <span class="token number">2</span><span class="token punctuation">.</span>快速排序        <span class="token function">O</span><span class="token punctuation">(</span> nlog n <span class="token operator">~</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span>
-    核心思想：分治
+    <span class="token comment" spellcheck="true">//核心思想：分治</span>
     <span class="token keyword">void</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> first<span class="token punctuation">,</span><span class="token keyword">int</span> last<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>last<span class="token operator">&lt;=</span>first<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> x<span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token punctuation">(</span>first<span class="token operator">+</span>last<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>i<span class="token operator">=</span>first<span class="token number">-1</span><span class="token punctuation">,</span>j<span class="token operator">=</span>last<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
@@ -511,7 +524,7 @@
 
 
 </code></pre>
-<h2 id="2-查找"><a href="#2-查找" class="headerlink" title="2.查找"></a>2.查找</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>线性查找<span class="token punctuation">(</span>快速选择<span class="token punctuation">)</span>    <span class="token function">O</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<h2 id="2-查找"><a href="#2-查找" class="headerlink" title="2.查找"></a>2.查找</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>线性查找<span class="token punctuation">(</span>快速选择<span class="token punctuation">)</span>    <span class="token function">O</span><span class="token punctuation">(</span> n <span class="token punctuation">)</span>
     基于快速排序
     <span class="token comment" spellcheck="true">//用途：查找一个无序表中第k小或第k大的数    </span>
     <span class="token keyword">int</span> <span class="token function">quick_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -522,14 +535,14 @@
             <span class="token keyword">do</span> j<span class="token operator">--</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">></span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">)</span><span class="token function">swap</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">int</span> xl<span class="token operator">=</span>j<span class="token operator">-</span>l<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token operator">/</span>
+        <span class="token keyword">int</span> xl<span class="token operator">=</span>j<span class="token operator">-</span>l<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>key<span class="token operator">&lt;=</span>xl<span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token function">quick_search</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>l<span class="token punctuation">,</span>j<span class="token punctuation">,</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token function">quick_search</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>r<span class="token punctuation">,</span>key<span class="token operator">-</span>xl<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     
 <span class="token number">2</span><span class="token punctuation">.</span>二分查找  <span class="token function">O</span><span class="token punctuation">(</span>log n<span class="token punctuation">)</span>
-    前提：查找的容器有序
-    核心思想：每次寻找折半    
+    <span class="token comment" spellcheck="true">//前提：查找的容器有序</span>
+    <span class="token comment" spellcheck="true">//核心思想：每次寻找折半    </span>
     <span class="token keyword">int</span> <span class="token function">half_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> n<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">int</span> first<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>last<span class="token operator">=</span>n<span class="token number">-1</span><span class="token punctuation">,</span>mid<span class="token punctuation">;</span>
         <span class="token keyword">while</span><span class="token punctuation">(</span>first<span class="token operator">&lt;=</span>last<span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -549,7 +562,7 @@
     大于<span class="token number">1</span>且只包含<span class="token number">1</span>和它本身两个约数的数
 <span class="token number">2</span><span class="token punctuation">.</span>试除法判质数
     <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>最暴力  <span class="token function">O</span><span class="token punctuation">(</span> n <span class="token punctuation">)</span> 
-     <span class="token comment" spellcheck="true">//直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true</span>
+    <span class="token comment" spellcheck="true">//直接用 [2,n-1] 的数依次除原数,但凡有一个则返回 false,若遍历完了则返回 true</span>
     bool <span class="token function">is_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token keyword">return</span> false<span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>x<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -568,7 +581,7 @@
        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>    
 <span class="token number">3</span><span class="token punctuation">.</span>试除法分解质因数    <span class="token function">O</span><span class="token punctuation">(</span> nlog n <span class="token operator">~</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">)</span>
-    原理：n中只包含一个大于<span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>的质因子
+    <span class="token comment" spellcheck="true">//原理：n中只包含一个大于sqrt(n)的质因子</span>
     <span class="token keyword">void</span> <span class="token function">divide_prime</span><span class="token punctuation">(</span><span class="token keyword">long</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">/</span>i<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//n%i==0成立说明n中已经没有了1 ~ i-1的因子,也保证了i中也没有了1 ~ i-1的因子</span>
