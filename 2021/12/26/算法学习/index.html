@@ -504,10 +504,11 @@
             <div id="articleContent">
                 <h1 id="一-基本算法"><a href="#一-基本算法" class="headerlink" title="一.基本算法"></a>一.基本算法</h1><h2 id="1-排序"><a href="#1-排序" class="headerlink" title="1.排序"></a>1.排序</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>基础排序 <span class="token function">O</span><span class="token punctuation">(</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span>型排序<span class="token punctuation">(</span>略<span class="token punctuation">)</span>
     冒泡 插入 选择
-<span class="token number">2</span><span class="token punctuation">.</span>快速排序        <span class="token function">O</span><span class="token punctuation">(</span> nlog n <span class="token operator">~</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span>快速排序<span class="token punctuation">(</span>不稳定<span class="token punctuation">)</span>        <span class="token function">O</span><span class="token punctuation">(</span> nlog2 n <span class="token operator">~</span> n<span class="token operator">*</span>n <span class="token punctuation">)</span> 
     <span class="token comment" spellcheck="true">//核心思想：分治</span>
+    <span class="token comment" spellcheck="true">//用数值作为分界，每次分界达到局部排序，最终全局排序</span>
     <span class="token keyword">void</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> first<span class="token punctuation">,</span><span class="token keyword">int</span> last<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>last<span class="token operator">&lt;=</span>first<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>last<span class="token operator">&lt;=</span>first<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> x<span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token punctuation">(</span>first<span class="token operator">+</span>last<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>i<span class="token operator">=</span>first<span class="token number">-1</span><span class="token punctuation">,</span>j<span class="token operator">=</span>last<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
         <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">{</span>    
             <span class="token keyword">do</span> i<span class="token operator">++</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//大于号小于号互换可变为降序                                </span>
@@ -519,9 +520,14 @@
         <span class="token function">quick_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>first<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">quick_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>last<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>    
-<span class="token number">3</span><span class="token punctuation">.</span>归并排序    
-
-
+<span class="token number">3</span><span class="token punctuation">.</span>归并排序<span class="token punctuation">(</span>稳定<span class="token punctuation">)</span>    <span class="token function">O</span><span class="token punctuation">(</span> nlog2 n<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//核心思想：分治</span>
+    <span class="token comment" spellcheck="true">//用下标位置分界，分别排序两侧，最终合并</span>
+    <span class="token comment" spellcheck="true">//合并用双指针实现，比较两侧当前的最值，在排序</span>
+    
+    
+    
+    
 
 </code></pre>
 <h2 id="2-查找"><a href="#2-查找" class="headerlink" title="2.查找"></a>2.查找</h2><pre class=" language-c"><code class="language-c"><span class="token number">1</span><span class="token punctuation">.</span>线性查找<span class="token punctuation">(</span>快速选择<span class="token punctuation">)</span>    <span class="token function">O</span><span class="token punctuation">(</span> n <span class="token punctuation">)</span>
@@ -552,7 +558,7 @@
             <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>key<span class="token punctuation">)</span><span class="token punctuation">{</span>
                 first<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-                last<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+                last<span class="token operator">=</span>mid<span class="token number">-1</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
          <span class="token punctuation">}</span>        
     <span class="token punctuation">}</span>
