@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -521,10 +521,23 @@
         <span class="token function">quick_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>last<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>    
 <span class="token number">3</span><span class="token punctuation">.</span>归并排序<span class="token punctuation">(</span>稳定<span class="token punctuation">)</span>    <span class="token function">O</span><span class="token punctuation">(</span> nlog2 n<span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//核心思想：分治</span>
+    <span class="token comment" spellcheck="true">//核心思想：分治,每次归并完成当次的排序</span>
     <span class="token comment" spellcheck="true">//用下标位置分界，分别排序两侧，最终合并</span>
-    <span class="token comment" spellcheck="true">//合并用双指针实现，比较两侧当前的最值，在排序</span>
-    
+    <span class="token comment" spellcheck="true">//合并用双指针实现，比较两侧当前的最值，z排序</span>
+    <span class="token keyword">void</span> <span class="token function">merge_sort</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> l<span class="token punctuation">,</span><span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>l<span class="token operator">>=</span>r<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+           <span class="token keyword">int</span> mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token function">merge_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>l<span class="token punctuation">,</span>mid<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">merge_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> b<span class="token punctuation">[</span>r<span class="token operator">-</span>l<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i<span class="token operator">=</span>l<span class="token punctuation">,</span>k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>j<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span>mid <span class="token operator">&amp;&amp;</span> j<span class="token operator">&lt;=</span>r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;=</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> b<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            <span class="token keyword">else</span> b<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span>mid<span class="token punctuation">)</span> b<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+        <span class="token keyword">while</span><span class="token punctuation">(</span>j<span class="token operator">&lt;=</span>r<span class="token punctuation">)</span> b<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>l<span class="token punctuation">,</span>t<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>r<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>t<span class="token operator">++</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     
     
     
@@ -547,7 +560,7 @@
     <span class="token punctuation">}</span>
     
 <span class="token number">2</span><span class="token punctuation">.</span>二分查找  <span class="token function">O</span><span class="token punctuation">(</span>log n<span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//前提：查找的容器有序</span>
+    <span class="token comment" spellcheck="true">//前提：查找的序列有序</span>
     <span class="token comment" spellcheck="true">//核心思想：每次寻找折半    </span>
     <span class="token keyword">int</span> <span class="token function">half_search</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> n<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">int</span> first<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>last<span class="token operator">=</span>n<span class="token number">-1</span><span class="token punctuation">,</span>mid<span class="token punctuation">;</span>
@@ -903,7 +916,7 @@
             + '来源: ChenfengDream<br />'
             + '文章作者: 乄尘封<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '拿去吧';
+            + '很荣幸能帮到你';
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
